@@ -90,7 +90,7 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
+    <None Include="AllWinCompClassDiagram.cd" />
     <None Include="PanelsDiagram.cd" />
     <None Include="project.json" />
   </ItemGroup>

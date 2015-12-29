@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Windows.UI.Composition.ContainerVisual" Collapsed="true">
-    <Position X="1" Y="3.25" Width="1.75" />
+    <Position X="1" Y="3.5" Width="1.75" />
     <TypeIdentifier />
   </Class>
   <Class Name="Windows.UI.Composition.Visual" Collapsed="true">
