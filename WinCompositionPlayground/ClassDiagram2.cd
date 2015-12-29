@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Windows.UI.Composition.ContainerVisual" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.Visual" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionObject" Collapsed="true">
+    <Position X="26.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.SpriteVisual" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionBatchCompletedEventArgs" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionEasingFunction" Collapsed="true">
+    <Position X="28.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionBrush" Collapsed="true">
+    <Position X="39" Y="1.75" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionEffectBrush" Collapsed="true">
+    <Position X="38.75" Y="3.25" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionEffectSourceParameter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="54.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionGraphicsDevice" Collapsed="true">
+    <Position X="49.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.Compositor">
+    <Position X="51.5" Y="3" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionAnimation" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionPropertySet" Collapsed="true">
+    <Position X="32" Y="1.75" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionDrawingSurface" Collapsed="true">
+    <Position X="47.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionColorBrush" Collapsed="true">
+    <Position X="41" Y="3.25" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionEffectFactory" Collapsed="true">
+    <Position X="52.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionScopedBatch" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionSurfaceBrush" Collapsed="true">
+    <Position X="36.5" Y="3.25" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionTarget" Collapsed="true">
+    <Position X="34.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionCommitBatch" Collapsed="true">
+    <Position X="43.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CubicBezierEasingFunction" Collapsed="true">
+    <Position X="27.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.ExpressionAnimation" Collapsed="true">
+    <Position X="23" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.LinearEasingFunction" Collapsed="true">
+    <Position X="29.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.RenderingDeviceReplacedEventArgs" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.CompositionClip" Collapsed="true">
+    <Position X="25.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.InsetClip" Collapsed="true">
+    <Position X="25.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.VisualCollection" Collapsed="true">
+    <Position X="45.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.KeyFrameAnimation" Collapsed="true">
+    <Position X="15" Y="3.25" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.ColorKeyFrameAnimation" Collapsed="true">
+    <Position X="18.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.QuaternionKeyFrameAnimation" Collapsed="true">
+    <Position X="20.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.ScalarKeyFrameAnimation">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.Vector2KeyFrameAnimation" Collapsed="true">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.Vector3KeyFrameAnimation" Collapsed="true">
+    <Position X="14" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Composition.Vector4KeyFrameAnimation" Collapsed="true">
+    <Position X="16.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="Windows.UI.Composition.ICompositionSurface" Collapsed="true">
+    <Position X="54.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Enum Name="Windows.UI.Composition.AnimationIterationBehavior" Collapsed="true">
+    <Position X="54.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Composition.AnimationStopBehavior" Collapsed="true">
+    <Position X="56.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Composition.CompositionBatchTypes" Collapsed="true">
+    <Position X="60" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Composition.CompositionBackfaceVisibility" Collapsed="true">
+    <Position X="58.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Composition.CompositionBitmapInterpolationMode" Collapsed="true">
+    <Position X="54.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Composition.CompositionBorderMode" Collapsed="true">
+    <Position X="56.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Composition.CompositionColorSpace" Collapsed="true">
+    <Position X="58.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Composition.CompositionCompositeMode" Collapsed="true">
+    <Position X="60" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Composition.CompositionEffectFactoryLoadStatus" Collapsed="true">
+    <Position X="54.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Composition.CompositionGetValueStatus" Collapsed="true">
+    <Position X="56.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Composition.CompositionStretch" Collapsed="true">
+    <Position X="58.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

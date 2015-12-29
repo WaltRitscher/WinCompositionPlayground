@@ -1,0 +1,963 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Windows.UI.Xaml.Controls.GridView" Collapsed="true">
+    <Position X="0.5" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ListViewBase" Collapsed="true">
+    <Position X="1.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ItemsControl" Collapsed="true">
+    <Position X="15" Y="2" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ItemsWrapGrid" Collapsed="true">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Panel" Collapsed="true">
+    <Position X="10.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Canvas" Collapsed="true">
+    <Position X="8" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WrapGrid" Collapsed="true">
+    <Position X="102" Y="10.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.VirtualizingPanel" Collapsed="true">
+    <Position X="10.25" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.BackClickEventArgs" Collapsed="true">
+    <Position X="102" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.DragItemsStartingEventArgs" Collapsed="true">
+    <Position X="96.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.NotifyEventArgs" Collapsed="true">
+    <Position X="103.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SemanticZoomViewChangedEventArgs" Collapsed="true">
+    <Position X="102" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TextControlPasteEventArgs" Collapsed="true">
+    <Position X="100.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs" Collapsed="true">
+    <Position X="109" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SemanticZoomLocation" Collapsed="true">
+    <Position X="100.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CandidateWindowBoundsChangedEventArgs" Collapsed="true">
+    <Position X="110.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs" Collapsed="true">
+    <Position X="96.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ChoosingItemContainerEventArgs" Collapsed="true">
+    <Position X="98.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ColumnDefinitionCollection" Collapsed="true">
+    <Position X="103.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.DataTemplateSelector" Collapsed="true">
+    <Position X="105.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.DragItemsCompletedEventArgs" Collapsed="true">
+    <Position X="95" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.StyleSelector" Collapsed="true">
+    <Position X="107.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.GroupStyle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="105.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.GroupStyleSelector" Collapsed="true">
+    <Position X="107.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ItemCollection" Collapsed="true">
+    <Position X="100.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ItemContainerGenerator" Collapsed="true">
+    <Position X="102" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.MediaTransportControlsHelper" Collapsed="true">
+    <Position X="100.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.RichEditBoxTextChangingEventArgs" Collapsed="true">
+    <Position X="95" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.RowDefinitionCollection" Collapsed="true">
+    <Position X="102" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TextBoxTextChangingEventArgs" Collapsed="true">
+    <Position X="110.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TextCompositionChangedEventArgs" Collapsed="true">
+    <Position X="95" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TextCompositionEndedEventArgs" Collapsed="true">
+    <Position X="96.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TextCompositionStartedEventArgs" Collapsed="true">
+    <Position X="98.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ToolTipService" Collapsed="true">
+    <Position X="107.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.UIElementCollection" Collapsed="true">
+    <Position X="109" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs" Collapsed="true">
+    <Position X="107.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.HubSectionHeaderClickEventArgs" Collapsed="true">
+    <Position X="110.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SectionsInViewChangedEventArgs" Collapsed="true">
+    <Position X="96.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewNavigationFailedEventArgs" Collapsed="true">
+    <Position X="107.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CalendarDatePickerDateChangedEventArgs" Collapsed="true">
+    <Position X="105.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CalendarViewSelectedDatesChangedEventArgs" Collapsed="true">
+    <Position X="109" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ContentDialogButtonClickDeferral" Collapsed="true">
+    <Position X="110.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ContentDialogButtonClickEventArgs" Collapsed="true">
+    <Position X="112.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ContentDialogClosedEventArgs" Collapsed="true">
+    <Position X="95" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ContentDialogClosingDeferral" Collapsed="true">
+    <Position X="96.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ContentDialogClosingEventArgs" Collapsed="true">
+    <Position X="98.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ContentDialogOpenedEventArgs" Collapsed="true">
+    <Position X="100.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.DatePickerValueChangedEventArgs" Collapsed="true">
+    <Position X="112.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.HubSectionCollection" Collapsed="true">
+    <Position X="109" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ListViewPersistenceHelper" Collapsed="true">
+    <Position X="96.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ScrollViewerView" Collapsed="true">
+    <Position X="103.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs" Collapsed="true">
+    <Position X="105.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs" Collapsed="true">
+    <Position X="107.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SearchBoxQueryChangedEventArgs" Collapsed="true">
+    <Position X="109" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SearchBoxQuerySubmittedEventArgs" Collapsed="true">
+    <Position X="110.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SearchBoxResultSuggestionChosenEventArgs" Collapsed="true">
+    <Position X="112.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SearchBoxSuggestionsRequestedEventArgs" Collapsed="true">
+    <Position X="95" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SplitViewPaneClosingEventArgs" Collapsed="true">
+    <Position X="105.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TimePickerValueChangedEventArgs" Collapsed="true">
+    <Position X="105.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewContentLoadingEventArgs" Collapsed="true">
+    <Position X="98.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewDeferredPermissionRequest" Collapsed="true">
+    <Position X="100.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewDOMContentLoadedEventArgs" Collapsed="true">
+    <Position X="102" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewLongRunningScriptDetectedEventArgs" Collapsed="true">
+    <Position X="103.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewNavigationCompletedEventArgs" Collapsed="true">
+    <Position X="105.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewNavigationStartingEventArgs" Collapsed="true">
+    <Position X="109" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewNewWindowRequestedEventArgs" Collapsed="true">
+    <Position X="110.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewPermissionRequest" Collapsed="true">
+    <Position X="112.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewPermissionRequestedEventArgs" Collapsed="true">
+    <Position X="95" Y="10.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewSettings" Collapsed="true">
+    <Position X="96.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewUnsupportedUriSchemeIdentifiedEventArgs" Collapsed="true">
+    <Position X="98.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewUnviewableContentIdentifiedEventArgs" Collapsed="true">
+    <Position X="100.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ColumnDefinition" Collapsed="true">
+    <Position X="102" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.RowDefinition" Collapsed="true">
+    <Position X="100.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.AutoSuggestBoxQuerySubmittedEventArgs" Collapsed="true">
+    <Position X="96.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.AutoSuggestBoxSuggestionChosenEventArgs" Collapsed="true">
+    <Position X="98.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.AutoSuggestBoxTextChangedEventArgs" Collapsed="true">
+    <Position X="100.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Flyout" Collapsed="true">
+    <Position X="102" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.MenuFlyout" Collapsed="true">
+    <Position X="102" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CleanUpVirtualizedItemEventArgs" Collapsed="true">
+    <Position X="100.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ContextMenuEventArgs" Collapsed="true">
+    <Position X="102" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ItemClickEventArgs" Collapsed="true">
+    <Position X="98.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SelectionChangedEventArgs" Collapsed="true">
+    <Position X="98.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TextChangedEventArgs" Collapsed="true">
+    <Position X="112.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ItemsPanelTemplate" Collapsed="true">
+    <Position X="103.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Border" Collapsed="true">
+    <Position X="103.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CaptureElement" Collapsed="true">
+    <Position X="112.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ContentPresenter" Collapsed="true">
+    <Position X="5.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Image" Collapsed="true">
+    <Position X="95" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ItemsPresenter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="107.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.RichTextBlockOverflow" Collapsed="true">
+    <Position X="98.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.RichTextBlock" Collapsed="true">
+    <Position X="96.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TextBlock" Collapsed="true">
+    <Position X="109" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Viewbox" Collapsed="true">
+    <Position X="110.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Grid" Collapsed="true">
+    <Position X="16" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.RelativePanel" Collapsed="true">
+    <Position X="19.25" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.StackPanel" Collapsed="true">
+    <Position X="1.25" Y="6" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.VariableSizedWrapGrid" Collapsed="true">
+    <Position X="3.5" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.VirtualizingStackPanel" Collapsed="true">
+    <Position X="112.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.IconElement" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.InkCanvas" Collapsed="true">
+    <Position X="96.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.MediaElement" Collapsed="true">
+    <Position X="98.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebView" Collapsed="true">
+    <Position X="95" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.BitmapIcon" Collapsed="true">
+    <Position X="0.75" Y="9" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.FontIcon" Collapsed="true">
+    <Position X="3" Y="9" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ItemsStackPanel" Collapsed="true">
+    <Position X="12.5" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.PathIcon" Collapsed="true">
+    <Position X="5.25" Y="9" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ScrollContentPresenter" Collapsed="true">
+    <Position X="5.5" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SymbolIcon" Collapsed="true">
+    <Position X="7.5" Y="9" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SwapChainBackgroundPanel" Collapsed="true">
+    <Position X="14.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SwapChainPanel" Collapsed="true">
+    <Position X="17" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ControlTemplate" Collapsed="true">
+    <Position X="103.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Control" Collapsed="true">
+    <Position X="48.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SemanticZoom" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ContentControl" Collapsed="true">
+    <Position X="33" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ListViewBaseHeaderItem" Collapsed="true">
+    <Position X="24" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.MediaTransportControls" Collapsed="true">
+    <Position X="54.25" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.PasswordBox" Collapsed="true">
+    <Position X="61" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ProgressRing" Collapsed="true">
+    <Position X="65.5" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.RichEditBox" Collapsed="true">
+    <Position X="67.75" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TextBox" Collapsed="true">
+    <Position X="70" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ToggleSwitch" Collapsed="true">
+    <Position X="72.25" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.UserControl" Collapsed="true">
+    <Position X="74.5" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.GroupItem" Collapsed="true">
+    <Position X="40.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SettingsFlyout" Collapsed="true">
+    <Position X="43" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ToolTip" Collapsed="true">
+    <Position X="45.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ComboBoxItem" Collapsed="true">
+    <Position X="107.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.FlipViewItem" Collapsed="true">
+    <Position X="100.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ListBoxItem" Collapsed="true">
+    <Position X="110.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ProgressBar" Collapsed="true">
+    <Position X="110.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Slider" Collapsed="true">
+    <Position X="103.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Button" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.HyperlinkButton" Collapsed="true">
+    <Position X="112.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ComboBox" Collapsed="true">
+    <Position X="105.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.FlipView" Collapsed="true">
+    <Position X="98.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ListBox" Collapsed="true">
+    <Position X="109" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CheckBox" Collapsed="true">
+    <Position X="95" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.RadioButton" Collapsed="true">
+    <Position X="112.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CalendarView" Collapsed="true">
+    <Position X="76.75" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CalendarViewDayItem" Collapsed="true">
+    <Position X="79" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.HubSection" Collapsed="true">
+    <Position X="81.25" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.MenuFlyoutItemBase" Collapsed="true">
+    <Position X="85.75" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.AppBarSeparator" Collapsed="true">
+    <Position X="90.25" Y="2" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CalendarDatePicker" Collapsed="true">
+    <Position X="92.5" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.DatePicker" Collapsed="true">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Hub" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SearchBox" Collapsed="true">
+    <Position X="47.5" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.SplitView" Collapsed="true">
+    <Position X="49.75" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TimePicker" Collapsed="true">
+    <Position X="56.5" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.AppBar" Collapsed="true">
+    <Position X="27.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.AutoSuggestBox" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CommandBarOverflowPresenter" Collapsed="true">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ContentDialog" Collapsed="true">
+    <Position X="31.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.FlyoutPresenter" Collapsed="true">
+    <Position X="36.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Frame" Collapsed="true">
+    <Position X="38.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.MenuFlyoutItem" Collapsed="true">
+    <Position X="83.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.MenuFlyoutPresenter" Collapsed="true">
+    <Position X="18.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.MenuFlyoutSeparator" Collapsed="true">
+    <Position X="85.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.MenuFlyoutSubItem" Collapsed="true">
+    <Position X="88" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Page" Collapsed="true">
+    <Position X="74.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ScrollViewer" Collapsed="true">
+    <Position X="20.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.CommandBar" Collapsed="true">
+    <Position X="27.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.GridViewHeaderItem" Collapsed="true">
+    <Position X="22.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.GridViewItem" Collapsed="true">
+    <Position X="103.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ListViewHeaderItem" Collapsed="true">
+    <Position X="25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ListViewItem" Collapsed="true">
+    <Position X="95" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ToggleMenuFlyoutItem" Collapsed="true">
+    <Position X="83.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.AppBarButton" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.AppBarToggleButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="95" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ListView" Collapsed="true">
+    <Position X="2.75" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.WebViewBrush" Collapsed="true">
+    <Position X="96.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.PivotItemEventArgs" Collapsed="true">
+    <Position X="109" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.DatePickedEventArgs" Collapsed="true">
+    <Position X="107.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.DatePickerFlyoutItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="110.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ItemsPickedEventArgs" Collapsed="true">
+    <Position X="105.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.PickerConfirmedEventArgs" Collapsed="true">
+    <Position X="105.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TimePickedEventArgs" Collapsed="true">
+    <Position X="102" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.DatePickerFlyoutPresenter" Collapsed="true">
+    <Position X="52" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ListPickerFlyoutPresenter" Collapsed="true">
+    <Position X="58.75" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TimePickerFlyoutPresenter" Collapsed="true">
+    <Position X="63.25" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.PickerFlyoutPresenter" Collapsed="true">
+    <Position X="29.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Pivot" Collapsed="true">
+    <Position X="16" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.PivotItem" Collapsed="true">
+    <Position X="34" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.DatePickerFlyout" Collapsed="true">
+    <Position X="109" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.ListPickerFlyout" Collapsed="true">
+    <Position X="112.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.PickerFlyout" Collapsed="true">
+    <Position X="107.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.TimePickerFlyout" Collapsed="true">
+    <Position X="103.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="Windows.UI.Xaml.Controls.IItemContainerMapping" Collapsed="true">
+    <Position X="96.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Windows.UI.Xaml.Controls.INavigate" Collapsed="true">
+    <Position X="98.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Windows.UI.Xaml.Controls.ISemanticZoomInformation" Collapsed="true">
+    <Position X="100.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Windows.UI.Xaml.Controls.ICommandBarElement" Collapsed="true">
+    <Position X="95" Y="11.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Enum Name="Windows.UI.Xaml.Controls.CandidateWindowAlignment" Collapsed="true">
+    <Position X="102" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.ClickMode" Collapsed="true">
+    <Position X="103.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.IncrementalLoadingTrigger" Collapsed="true">
+    <Position X="107.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.ItemsUpdatingScrollMode" Collapsed="true">
+    <Position X="109" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.ListViewReorderMode" Collapsed="true">
+    <Position X="112.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.ListViewSelectionMode" Collapsed="true">
+    <Position X="95" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.Orientation" Collapsed="true">
+    <Position X="96.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.PanelScrollingDirection" Collapsed="true">
+    <Position X="98.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.PasswordRevealMode" Collapsed="true">
+    <Position X="100.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.RichEditClipboardFormat" Collapsed="true">
+    <Position X="103.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.ScrollBarVisibility" Collapsed="true">
+    <Position X="105.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.ScrollIntoViewAlignment" Collapsed="true">
+    <Position X="107.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.ScrollMode" Collapsed="true">
+    <Position X="109" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.SelectionMode" Collapsed="true">
+    <Position X="110.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.SnapPointsType" Collapsed="true">
+    <Position X="112.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.StretchDirection" Collapsed="true">
+    <Position X="98.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.VirtualizationMode" Collapsed="true">
+    <Position X="102" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.ZoomMode" Collapsed="true">
+    <Position X="109" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.AppBarClosedDisplayMode" Collapsed="true">
+    <Position X="95" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.AutoSuggestionBoxTextChangeReason" Collapsed="true">
+    <Position X="96.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.CalendarViewDisplayMode" Collapsed="true">
+    <Position X="98.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.CalendarViewSelectionMode" Collapsed="true">
+    <Position X="100.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.ContentDialogResult" Collapsed="true">
+    <Position X="105.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.SplitViewDisplayMode" Collapsed="true">
+    <Position X="95" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.SplitViewPanePlacement" Collapsed="true">
+    <Position X="96.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.Symbol" Collapsed="true">
+    <Position X="100.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.WebViewExecutionMode" Collapsed="true">
+    <Position X="103.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.WebViewPermissionState" Collapsed="true">
+    <Position X="105.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.WebViewPermissionType" Collapsed="true">
+    <Position X="107.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.ListPickerFlyoutSelectionMode" Collapsed="true">
+    <Position X="110.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Windows.UI.Xaml.Controls.PivotSlideInAnimationGroup" Collapsed="true">
+    <Position X="102" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Delegate Name="Windows.UI.Xaml.Controls.BackClickEventHandler" Collapsed="true">
+    <Position X="95" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.CleanUpVirtualizedItemEventHandler" Collapsed="true">
+    <Position X="98.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.ContextMenuOpeningEventHandler" Collapsed="true">
+    <Position X="100.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.DragItemsStartingEventHandler" Collapsed="true">
+    <Position X="102" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.ItemClickEventHandler" Collapsed="true">
+    <Position X="105.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.NotifyEventHandler" Collapsed="true">
+    <Position X="110.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.SelectionChangedEventHandler" Collapsed="true">
+    <Position X="95" Y="16" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.SemanticZoomViewChangedEventHandler" Collapsed="true">
+    <Position X="96.75" Y="16" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.TextChangedEventHandler" Collapsed="true">
+    <Position X="98.5" Y="16" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.TextControlPasteEventHandler" Collapsed="true">
+    <Position X="100.25" Y="16" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.CalendarViewDayItemChangingEventHandler" Collapsed="true">
+    <Position X="96.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.HubSectionHeaderClickEventHandler" Collapsed="true">
+    <Position X="103.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.ListViewItemToKeyHandler" Collapsed="true">
+    <Position X="107.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.ListViewKeyToItemHandler" Collapsed="true">
+    <Position X="109" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.SectionsInViewChangedEventHandler" Collapsed="true">
+    <Position X="112.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Windows.UI.Xaml.Controls.WebViewNavigationFailedEventHandler" Collapsed="true">
+    <Position X="102" Y="16" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
