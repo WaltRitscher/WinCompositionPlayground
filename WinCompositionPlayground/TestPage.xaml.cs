@@ -17,12 +17,20 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+
+
+// Created by Walt Ritscher
+// https://www.linkedin.com/in/waltritscher
+// I'm a staff author at Lynda.com, part of the LinkedIn family. 
+// My content team produces hundreds of technical training courses for software developers each year.
+
+// Lynda.com has over 4200 courses (Topics include IT (dev, devops, web), creative, business, photography, music and lots of documentaries).
+// Get your free trial at http://lynda.com
+// My courses are at http://lynda.com/waltritscher
+// 
 
 namespace WinComposition.Playground {
-	/// <summary>
-	/// An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
+
 	public sealed partial class TestPage : Page {
 		public TestPage() {
 			this.InitializeComponent();

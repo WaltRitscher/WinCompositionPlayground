@@ -5,6 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Composition;
 
+// Created by Walt Ritscher
+// https://www.linkedin.com/in/waltritscher
+// I'm a staff author at Lynda.com, part of the LinkedIn family. 
+// My content team produces hundreds of technical training courses for software developers each year.
+
+// Lynda.com has over 4200 courses (Topics include IT (dev, devops, web), creative, business, photography, music and lots of documentaries).
+// Get your free trial at http://lynda.com
+// My courses are at http://lynda.com/waltritscher
+// 
+
 namespace WinCompositionPlayground {
 	class AnimationFactory {
 		private Compositor _compositor;
