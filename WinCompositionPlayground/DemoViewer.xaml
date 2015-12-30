@@ -1,11 +1,11 @@
-﻿<Page
-		x:Class="WinComposition.Playground.DemoViewer"
-		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		xmlns:local="using:WinComposition.Playground"
-		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		mc:Ignorable="d" Background='#FF222222'>
+﻿<Page x:Class="WinComposition.Playground.DemoViewer"
+			xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			xmlns:local="using:WinComposition.Playground"
+			xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			mc:Ignorable="d"
+			Background='#FF222222'>
 	<Page.Resources>
 		<LinearGradientBrush  x:Key='middle'
 													StartPoint="0,0"
@@ -35,6 +35,20 @@
 							Value='{StaticResource middle}' />
 
 		</Style>
+		
+
+		<!--<Style TargetType='PivotHeaderItem'>
+			<Setter Property='Background'
+							Value='AliceBlue'  />
+			<Setter Property='Margin'
+							Value='0' />
+		</Style>-->
+		<Style TargetType='PivotItem'>
+			<Setter Property='Background'
+							Value='AliceBlue' />
+			<Setter Property='Margin'
+							Value='0' />
+		</Style>
 		<DataTemplate x:Key="PivotHeader">
 			<StackPanel>
 				<TextBlock FontSize="18"
@@ -43,30 +57,42 @@
 			</StackPanel>
 		</DataTemplate>
 	</Page.Resources>
-	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
-		
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width='Auto' />
 			<ColumnDefinition Width='1*' />
 		</Grid.ColumnDefinitions>
 		<Border Style='{StaticResource smooth}'>
-		<StackPanel>
-			<TextBlock Text='Demo Viewer' Margin='3,0,0,0' FontFamily='Calibri'
-								 FontSize='26.667'
-								 TextWrapping='WrapWholeWords'/>
-				<ListView Grid.Column='0'
-									Background='White'
-									MinHeight='600' VerticalAlignment='Stretch'>
-				<TextBlock Text='Demo A' />
-				<TextBlock Text='Demo B' />
-				<TextBlock Text='Demo C' />
-				<TextBlock Text='Demo D' />
-			</ListView>
-		</StackPanel>
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height='Auto' />
+					<RowDefinition Height='*' />
+				</Grid.RowDefinitions>
+
+				<TextBlock Text='Demo Viewer' 
+									 Margin='3,10,0,0'
+									 FontFamily='Calibri'
+									 FontSize='26.667'
+									 TextWrapping='WrapWholeWords' />
+
+				<Border x:Name='ListViewWrapper'
+								Grid.Row='1'>
+					<ListView Background='White'
+										VerticalAlignment='Stretch'
+										Height='{Binding ElementName=ListViewWrapper,  Path=ActualHeight}'>
+						<TextBlock Text='Demo A' />
+						<TextBlock Text='Demo B' />
+						<TextBlock Text='Demo C' />
+						<TextBlock Text='Demo D' />
+					</ListView>
+				</Border>
+			</Grid>
 		</Border>
 		<Border Style='{StaticResource smooth}'
 						Grid.Column='1'>
-			<Pivot Grid.Column='1' Background='White'>
+			<Pivot Grid.Column='1'
+						 Background='White' >
 				<PivotItem Header='Demo'>
 
 				</PivotItem>
