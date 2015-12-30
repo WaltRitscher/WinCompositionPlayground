@@ -5,21 +5,75 @@
 		xmlns:local="using:WinComposition.Playground"
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		mc:Ignorable="d">
+		mc:Ignorable="d" Background='#FF222222'>
+	<Page.Resources>
+		<LinearGradientBrush  x:Key='middle'
+													StartPoint="0,0"
+													EndPoint="0,1">
+			<GradientStop Color="White"
+										Offset="0" />
+			<GradientStop Color="DarkGray"
+										Offset=".5" />
+			<GradientStop Color="White"
+										Offset=".85" />
+			<GradientStop Color="#222222"
+										Offset="1" />
+		</LinearGradientBrush>
+		<Style TargetType='Border'
+					 x:Key='smooth'>
+			<Setter Property='BorderBrush'
+							Value='DarkGray' />
+			<Setter Property='BorderThickness'
+							Value='2' />
+			<Setter Property='Margin'
+							Value='10' />
+			<Setter Property='CornerRadius'
+							Value='5' />
+			<Setter Property='Padding'
+							Value='5' />
+			<Setter Property='Background'
+							Value='{StaticResource middle}' />
 
-		<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		</Style>
+		<DataTemplate x:Key="PivotHeader">
+			<StackPanel>
+				<TextBlock FontSize="18"
+									 Foreground="Blue"
+									 Text="{Binding}" />
+			</StackPanel>
+		</DataTemplate>
+	</Page.Resources>
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+		
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width='140' />
+			<ColumnDefinition Width='Auto' />
 			<ColumnDefinition Width='1*' />
 		</Grid.ColumnDefinitions>
-		<ListView Grid.Column='0'></ListView>
-		<Pivot Grid.Column='1'>
-			<PivotItem Header='Demo'>
+		<Border Style='{StaticResource smooth}'>
+		<StackPanel>
+			<TextBlock Text='Demo Viewer' Margin='3,0,0,0' FontFamily='Calibri'
+								 FontSize='26.667'
+								 TextWrapping='WrapWholeWords'/>
+				<ListView Grid.Column='0'
+									Background='White'
+									MinHeight='600' VerticalAlignment='Stretch'>
+				<TextBlock Text='Demo A' />
+				<TextBlock Text='Demo B' />
+				<TextBlock Text='Demo C' />
+				<TextBlock Text='Demo D' />
+			</ListView>
+		</StackPanel>
+		</Border>
+		<Border Style='{StaticResource smooth}'
+						Grid.Column='1'>
+			<Pivot Grid.Column='1' Background='White'>
+				<PivotItem Header='Demo'>
 
-			</PivotItem>
-			<PivotItem Header='Read Me'>
-				<WebView x:Name='ReadMeWebView' />
-			</PivotItem>
-		</Pivot>
+				</PivotItem>
+				<PivotItem Header='Read Me'>
+					<WebView x:Name='ReadMeWebView' />
+				</PivotItem>
+			</Pivot>
+		</Border>
 	</Grid>
 </Page>

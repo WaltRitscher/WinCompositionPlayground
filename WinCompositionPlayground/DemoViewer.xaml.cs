@@ -33,7 +33,7 @@ namespace WinComposition.Playground {
 
 		private  void DemoViewer_Loaded(object sender, RoutedEventArgs e) {
 
-			Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", "/Readme1.html");
+			Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", "/Checkerboard1.html");
 			StreamUriWinRTResolver resolver = new StreamUriWinRTResolver();
 			ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
 
