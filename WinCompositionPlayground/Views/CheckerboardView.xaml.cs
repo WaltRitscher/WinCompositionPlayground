@@ -22,10 +22,10 @@ namespace WinComposition.Playground {
 	// Get your free trial at http://lynda.com
 	// My courses are at http://lynda.com/waltritscher
 	// 
-	public sealed partial class Checkerboard : Page {
+	public sealed partial class CheckerboardView : Page {
 		private ObservableCollection<Rectangle> _squares = new ObservableCollection<Rectangle>();
 
-		public Checkerboard() {
+		public CheckerboardView() {
 			this.InitializeComponent();
 
 			this.Loaded += Checkerboard_Loaded;
