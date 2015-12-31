@@ -29,7 +29,8 @@ namespace WinComposition.Playground {
 		public App() {
 			this.InitializeComponent();
 			this.Suspending += OnSuspending;
-			ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
+			ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.Auto;
+		
 
 		}
 
@@ -43,7 +44,7 @@ namespace WinComposition.Playground {
 #if DEBUG
 			if (System.Diagnostics.Debugger.IsAttached)
 			{
-				this.DebugSettings.EnableFrameRateCounter = true;
+			//	this.DebugSettings.EnableFrameRateCounter = true;
 
 			}
 #endif

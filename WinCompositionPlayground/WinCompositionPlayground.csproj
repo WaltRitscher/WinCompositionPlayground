@@ -105,6 +105,9 @@
     <Compile Include="Models\DemoItem.cs" />
     <Compile Include="StreamUriWinRTResolver.cs" />
     <Compile Include="ViewModels\DemosViewModel.cs" />
+    <Compile Include="Views\Checkerboard2.xaml.cs">
+      <DependentUpon>Checkerboard2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CheckerboardView.xaml.cs">
       <DependentUpon>CheckerboardView.xaml</DependentUpon>
     </Compile>
@@ -149,6 +152,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="DemoViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Checkerboard2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

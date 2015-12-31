@@ -21,7 +21,7 @@ namespace WinComposition.Playground.ViewModels {
 			{
 				DemoName = "Checkerboard 2",
 				DocPath = "/Docs/Checkerboard2.html",
-				DemoPageType = typeof(WinComposition.Playground.Views.CheckerboardView)
+				DemoPageType = typeof(WinComposition.Playground.Views.Checkerboard2)
 			});
 			DemoItems = demoItems;
 		}

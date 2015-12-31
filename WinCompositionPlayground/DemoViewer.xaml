@@ -93,7 +93,7 @@
 			<Pivot Grid.Column='1'
 						 Background='White'>
 				<PivotItem Header='Demo'>
-
+					<Frame x:Name='DemoFrame' />
 				</PivotItem>
 				<PivotItem Header='Read Me'>
 					<WebView x:Name='ReadMeWebView' />

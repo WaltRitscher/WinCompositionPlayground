@@ -27,6 +27,8 @@ namespace WinComposition.Playground {
 				Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", demoItem.DocPath);
 				StreamUriWinRTResolver resolver = new StreamUriWinRTResolver();
 				ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
+
+				DemoFrame.Navigate(demoItem.DemoPageType);
 			}
 		}
 
