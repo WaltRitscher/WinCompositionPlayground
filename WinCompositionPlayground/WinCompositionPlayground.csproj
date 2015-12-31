@@ -103,6 +103,7 @@
       <DependentUpon>DemoViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\DemoItem.cs" />
+    <Compile Include="StreamUriWinRTResolver.cs" />
     <Compile Include="ViewModels\DemosViewModel.cs" />
     <Compile Include="Views\CheckerboardView.xaml.cs">
       <DependentUpon>CheckerboardView.xaml</DependentUpon>

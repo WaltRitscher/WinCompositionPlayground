@@ -35,7 +35,6 @@
 							Value='{StaticResource middle}' />
 
 		</Style>
-		
 
 		<!--<Style TargetType='PivotHeaderItem'>
 			<Setter Property='Background'
@@ -70,7 +69,7 @@
 					<RowDefinition Height='*' />
 				</Grid.RowDefinitions>
 
-				<TextBlock Text='Demo Viewer' 
+				<TextBlock Text='Demo Viewer'
 									 Margin='3,10,0,0'
 									 FontFamily='Calibri'
 									 FontSize='26.667'
@@ -78,10 +77,13 @@
 
 				<Border x:Name='ListViewWrapper'
 								Grid.Row='1'>
-					<ListView Background='White'
+					<ListView x:Name='TocListView'
+										Background='White'
 										VerticalAlignment='Stretch'
-										Height='{Binding ElementName=ListViewWrapper,  Path=ActualHeight}' ItemsSource='{Binding}'>
-					
+										Height='{Binding ElementName=ListViewWrapper,  Path=ActualHeight}'
+										ItemsSource='{Binding DemoItems}'
+										DisplayMemberPath='DemoName'>
+
 					</ListView>
 				</Border>
 			</Grid>
@@ -89,7 +91,7 @@
 		<Border Style='{StaticResource smooth}'
 						Grid.Column='1'>
 			<Pivot Grid.Column='1'
-						 Background='White' >
+						 Background='White'>
 				<PivotItem Header='Demo'>
 
 				</PivotItem>

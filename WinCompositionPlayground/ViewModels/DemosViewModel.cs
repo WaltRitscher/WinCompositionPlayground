@@ -13,14 +13,20 @@ namespace WinComposition.Playground.ViewModels {
 	class DemosViewModel  {
 
 		public DemosViewModel() {
-			var docs = new List<DemoItem>();
-			docs.Add(new DemoItem { DocPath = "Checkerboard1.html", DemoPageType = typeof(WinComposition.Playground.Views.CheckerboardView) });
-			//docs.Add("Checkerboard2.html");
-
-			DocumentUris = docs;
+			var demoItems = new List<DemoItem>();
+			demoItems.Add(new DemoItem {DemoName="Checkerboard 1",
+																	DocPath = "/Docs/Checkerboard1.html",
+																  DemoPageType = typeof(WinComposition.Playground.Views.CheckerboardView) });
+			demoItems.Add(new DemoItem
+			{
+				DemoName = "Checkerboard 2",
+				DocPath = "/Docs/Checkerboard2.html",
+				DemoPageType = typeof(WinComposition.Playground.Views.CheckerboardView)
+			});
+			DemoItems = demoItems;
 		}
 
-		List<DemoItem> DocumentUris {
+	public	List<DemoItem> DemoItems {
 			get;
 			set;
 
