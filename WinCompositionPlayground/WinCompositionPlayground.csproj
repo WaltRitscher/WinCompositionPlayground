@@ -106,8 +106,8 @@
     <Compile Include="Models\DemoItem.cs" />
     <Compile Include="StreamUriWinRTResolver.cs" />
     <Compile Include="ViewModels\DemosViewModel.cs" />
-    <Compile Include="Views\Checkerboard2.xaml.cs">
-      <DependentUpon>Checkerboard2.xaml</DependentUpon>
+    <Compile Include="Views\CheckerboardStatic.xaml.cs">
+      <DependentUpon>CheckerboardStatic.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CheckerboardView.xaml.cs">
       <DependentUpon>CheckerboardView.xaml</DependentUpon>
@@ -120,8 +120,8 @@
     <Compile Include="TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Loading.xaml.cs">
-      <DependentUpon>Loading.xaml</DependentUpon>
+    <Compile Include="Views\Start.xaml.cs">
+      <DependentUpon>Start.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +131,11 @@
     <None Include="WinCompostionPlayground_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Start1.png" />
+    <Content Include="Assets\Start2.png" />
+    <Content Include="Docs\CheckerboardStatic.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Docs\Checkerboard2.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -159,7 +164,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Checkerboard2.xaml">
+    <Page Include="Views\CheckerboardStatic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,7 +180,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Loading.xaml">
+    <Page Include="Views\Start.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

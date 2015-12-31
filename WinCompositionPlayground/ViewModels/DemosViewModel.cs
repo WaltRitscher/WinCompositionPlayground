@@ -16,22 +16,23 @@ namespace WinComposition.Playground.ViewModels {
             var demoItems = new List<DemoItem>();
             demoItems.Add(new DemoItem
             {
-                DemoName = "Checkerboard 1",
+                DemoName = "Checkerboard Static",
+                DocPath = "/Docs/CheckerboardStatic.html",
+                DemoPageType = typeof(WinComposition.Playground.Views.CheckerboardStatic)
+            });
+            demoItems.Add(new DemoItem
+            {
+                DemoName = "Checkerboard Fade Animation",
                 DocPath = "/Docs/Checkerboard1.html",
                 DemoPageType = typeof(WinComposition.Playground.Views.CheckerboardView)
             });
-            demoItems.Add(new DemoItem
-            {
-                DemoName = "Checkerboard 2",
-                DocPath = "/Docs/Checkerboard2.html",
-                DemoPageType = typeof(WinComposition.Playground.Views.Checkerboard2)
-            });
+           
 
             demoItems.Add(new DemoItem
             {
-                DemoName = "Loading",
+                DemoName = "Checkerboard Spin Animation",
                 DocPath = "/Docs/Checkerboard2.html",
-                DemoPageType = typeof(WinComposition.Playground.Views.Loading)
+                DemoPageType = typeof(WinComposition.Playground.Views.Start)
             });
             DemoItems = demoItems;
         }

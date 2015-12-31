@@ -20,8 +20,8 @@ using Windows.UI.Xaml.Shapes;
 
 namespace WinComposition.Playground.Views {
 
-	public sealed partial class Checkerboard2 : Page {
-		public Checkerboard2() {
+	public sealed partial class CheckerboardStatic : Page {
+		public CheckerboardStatic() {
 			this.InitializeComponent();
 			
 			this.DataContext = SetupSquares(3000);

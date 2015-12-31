@@ -50,12 +50,10 @@ namespace WinComposition.Playground {
         public void ChangeTextCallBack() {
             var demoItem = TocListView.SelectedItem as DemoItem;
             DemoFrame.Navigate(demoItem.DemoPageType);
-           // DemoFrame.Navigate(typeof(Views.Checkerboard2));
         }
 
         private void DemoFrame_Navigated(object sender, Windows.UI.Xaml.Navigation.NavigationEventArgs e) {
-
-          
+                      
             DemoFrame.BackStack.Clear();
         }
 
@@ -63,20 +61,19 @@ namespace WinComposition.Playground {
             Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", "/Docs/Checkerboard1.html");
             StreamUriWinRTResolver resolver = new StreamUriWinRTResolver();
             ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
+            DemoFrame.Navigate(typeof(Views.Start));
 
-            ReadMeWebView.NavigationFailed += ReadMeWebView_NavigationFailed;
+            
         }
 
         private void ChildPageLoaded(ChildPageLoadedMessage msg) {
             ProgressGrid.Visibility = Visibility.Collapsed;
-
             ProgressRing1.IsActive = false;
 
 
 
         }
 
-        private void ReadMeWebView_NavigationFailed(object sender, WebViewNavigationFailedEventArgs e) {
-        }
+       
     }
 }
