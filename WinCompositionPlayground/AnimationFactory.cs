@@ -15,7 +15,7 @@ using Windows.UI.Composition;
 // My courses are at http://lynda.com/waltritscher
 // 
 
-namespace WinCompositionPlayground {
+namespace WinComposition.Playground.Animations {
 	class AnimationFactory {
 		private Compositor _compositor;
 

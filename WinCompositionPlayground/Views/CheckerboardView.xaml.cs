@@ -10,7 +10,7 @@ using Windows.UI.Xaml.Hosting;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Shapes;
 
-namespace WinComposition.Playground {
+namespace WinComposition.Playground.Views {
 	// https://msdn.microsoft.com/en-us/magazine/mt590968
 
 	// Created by Walt Ritscher

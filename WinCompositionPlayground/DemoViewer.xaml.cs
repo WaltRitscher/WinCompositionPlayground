@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using WinComposition.Playground.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
@@ -27,7 +28,7 @@ namespace WinComposition.Playground {
 		public DemoViewer() {
 			this.InitializeComponent();
 			this.Loaded += DemoViewer_Loaded;
-
+			this.DataContext = new DemosViewModel();
 			
 		}
 

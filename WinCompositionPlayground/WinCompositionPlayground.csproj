@@ -102,6 +102,8 @@
     <Compile Include="DemoViewer.xaml.cs">
       <DependentUpon>DemoViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\DemoItem.cs" />
+    <Compile Include="ViewModels\DemosViewModel.cs" />
     <Compile Include="Views\CheckerboardView.xaml.cs">
       <DependentUpon>CheckerboardView.xaml</DependentUpon>
     </Compile>
@@ -121,6 +123,9 @@
     <None Include="WinCompostionPlayground_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Docs\Checkerboard2.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Docs\ReadMe.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -80,11 +80,8 @@
 								Grid.Row='1'>
 					<ListView Background='White'
 										VerticalAlignment='Stretch'
-										Height='{Binding ElementName=ListViewWrapper,  Path=ActualHeight}'>
-						<TextBlock Text='Demo A' />
-						<TextBlock Text='Demo B' />
-						<TextBlock Text='Demo C' />
-						<TextBlock Text='Demo D' />
+										Height='{Binding ElementName=ListViewWrapper,  Path=ActualHeight}' ItemsSource='{Binding}'>
+					
 					</ListView>
 				</Border>
 			</Grid>
