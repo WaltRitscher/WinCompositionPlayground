@@ -30,6 +30,7 @@ namespace WinComposition.Playground.Views {
 
 		private void Page_Loaded(object sender, RoutedEventArgs e) {
 			Messenger.Default.Send(new ChildPageLoadedMessage());
+            MainGrid.Visibility = Visibility.Visible;
 		}
 
 		private ObservableCollection<Rectangle> SetupSquares(int count) {
