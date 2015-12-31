@@ -93,7 +93,11 @@
 			<Pivot Grid.Column='1'
 						 Background='White'>
 				<PivotItem Header='Demo'>
-					<Frame x:Name='DemoFrame' />
+					<Grid>
+						
+						<Frame x:Name='DemoFrame' />
+						<ProgressRing x:Name='ProgressRing1' IsActive='True' Width='150' Height='150' />
+					</Grid>
 				</PivotItem>
 				<PivotItem Header='Read Me'>
 					<WebView x:Name='ReadMeWebView' />
