@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Windows.Graphics.Display;
@@ -33,6 +34,7 @@ namespace WinComposition.Playground.Views {
 
 		private async void Checkerboard_Loaded(object sender, RoutedEventArgs e) {
 			await SetupSquares();
+			Messenger.Default.Send(new ChildPageLoadedMessage());
 		}
 
 		private async Task SetupSquares() {
@@ -84,7 +86,7 @@ namespace WinComposition.Playground.Views {
 				animation2.DelayTime = TimeSpan.FromMilliseconds(ran.Next(0, 2000));
 
 				animation2.IterationBehavior = AnimationIterationBehavior.Forever;
-				visual.StartAnimation("RotationAngle", animation2);
+			//	visual.StartAnimation("RotationAngle", animation2);
 			}
 
 			this.DataContext = _squares;

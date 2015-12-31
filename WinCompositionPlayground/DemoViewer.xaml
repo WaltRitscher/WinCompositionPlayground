@@ -67,6 +67,7 @@
 				<Grid.RowDefinitions>
 					<RowDefinition Height='Auto' />
 					<RowDefinition Height='*' />
+					<RowDefinition Height='120' />
 				</Grid.RowDefinitions>
 
 				<TextBlock Text='Demo Viewer'
@@ -86,17 +87,19 @@
 
 					</ListView>
 				</Border>
+
 			</Grid>
 		</Border>
 		<Border Style='{StaticResource smooth}'
 						Grid.Column='1'>
-			<Pivot Grid.Column='1'
-						 Background='White'>
+			<Pivot Background='White'>
 				<PivotItem Header='Demo'>
 					<Grid>
 						
 						<Frame x:Name='DemoFrame' />
-						<ProgressRing x:Name='ProgressRing1' IsActive='True' Width='150' Height='150' />
+						<ProgressRing x:Name='ProgressRing1'
+													IsActive='True' Width='80' Height='80' />
+
 					</Grid>
 				</PivotItem>
 				<PivotItem Header='Read Me'>
@@ -104,5 +107,6 @@
 				</PivotItem>
 			</Pivot>
 		</Border>
+
 	</Grid>
 </Page>

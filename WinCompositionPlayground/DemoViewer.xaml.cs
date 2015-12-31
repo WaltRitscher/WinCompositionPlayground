@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
+using System.Threading.Tasks;
 using WinComposition.Playground.Models;
 using WinComposition.Playground.ViewModels;
 using Windows.UI.Xaml;
@@ -15,12 +17,17 @@ namespace WinComposition.Playground {
 
 		public DemoViewer() {
 			this.InitializeComponent();
-			this.Loaded += DemoViewer_Loaded;
+			Messenger.Default.Register<ChildPageLoadedMessage>(this, ChildPageLoaded);
+		 this.Loaded += DemoViewer_Loaded;
 			TocListView.DataContext = new DemosViewModel();
 			TocListView.SelectionChanged += TocListView_SelectionChanged;
 		}
 
 		private void TocListView_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+
+			ProgressRing1.IsActive = true;
+			
+		//	ProgressRing1.Visibility = Visibility.Visible;
 			var demoItem = TocListView.SelectedItem as DemoItem;
 			if (demoItem != null)
 			{
@@ -29,6 +36,7 @@ namespace WinComposition.Playground {
 				ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
 
 				DemoFrame.Navigate(demoItem.DemoPageType);
+				DemoFrame.BackStack.Clear();
 			}
 		}
 
@@ -38,6 +46,15 @@ namespace WinComposition.Playground {
 			ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
 
 			ReadMeWebView.NavigationFailed += ReadMeWebView_NavigationFailed;
+		}
+
+		private void ChildPageLoaded(ChildPageLoadedMessage msg) {
+		
+		
+				ProgressRing1.IsActive = false;
+
+				//ProgressRing1.Visibility = Visibility.Collapsed;
+			
 		}
 
 		private void ReadMeWebView_NavigationFailed(object sender, WebViewNavigationFailedEventArgs e) {

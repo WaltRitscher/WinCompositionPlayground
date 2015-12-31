@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -22,9 +23,14 @@ namespace WinComposition.Playground.Views {
 	public sealed partial class Checkerboard2 : Page {
 		public Checkerboard2() {
 			this.InitializeComponent();
+			
 			this.DataContext = SetupSquares(3000);
+			this.Loaded += Page_Loaded;
 		}
-		
+
+		private void Page_Loaded(object sender, RoutedEventArgs e) {
+			Messenger.Default.Send(new ChildPageLoadedMessage());
+		}
 
 		private ObservableCollection<Rectangle> SetupSquares(int count) {
 			var squares = new ObservableCollection<Rectangle>();
