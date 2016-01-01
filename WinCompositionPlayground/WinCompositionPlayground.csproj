@@ -96,18 +96,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimationFactory.cs" />
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ChildPageLoadedMessage.cs" />
     <Compile Include="DemoViewer.xaml.cs">
       <DependentUpon>DemoViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildPageLoadedMessage.cs" />
     <Compile Include="Models\DemoItem.cs" />
     <Compile Include="StreamUriWinRTResolver.cs" />
     <Compile Include="ViewModels\DemosViewModel.cs" />
     <Compile Include="Views\CheckerboardStatic.xaml.cs">
       <DependentUpon>CheckerboardStatic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckerboardSpin.xaml.cs">
+      <DependentUpon>CheckerboardSpin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CheckerboardView.xaml.cs">
       <DependentUpon>CheckerboardView.xaml</DependentUpon>
@@ -156,7 +159,7 @@
     <Content Include="Readme2.css" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <ApplicationDefinition Include="Views\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
@@ -167,6 +170,10 @@
     <Page Include="Views\CheckerboardStatic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CheckerboardSpin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\CheckerboardView.xaml">
       <SubType>Designer</SubType>
