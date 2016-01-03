@@ -75,7 +75,7 @@ namespace WinComposition.Playground.Views {
 				fadeAnimation.DelayTime = TimeSpan.FromMilliseconds(ran.Next(0, 2000));
 
 				fadeAnimation.IterationBehavior = AnimationIterationBehavior.Forever;
-				visual.StartAnimation("Opacity", fadeAnimation);
+				//visual.StartAnimation("Opacity", fadeAnimation);
 
 				var animation2 = compositor.CreateScalarKeyFrameAnimation();
 				animation2.InsertKeyFrame(0.0f, 0.0f);
@@ -86,7 +86,7 @@ namespace WinComposition.Playground.Views {
 				animation2.DelayTime = TimeSpan.FromMilliseconds(ran.Next(0, 2000));
 
 				animation2.IterationBehavior = AnimationIterationBehavior.Forever;
-			//	visual.StartAnimation("RotationAngle", animation2);
+				visual.StartAnimation("RotationAngle", animation2);
 			}
 
 			this.DataContext = _squares;

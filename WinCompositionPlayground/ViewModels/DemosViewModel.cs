@@ -22,7 +22,7 @@ namespace WinComposition.Playground.ViewModels {
             });
             demoItems.Add(new DemoItem
             {
-                DemoName = "Checkerboard 1",
+                DemoName = "Checkerboard (Fade animation)",
                 DocPath = "/Docs/Checkerboard1.html",
                 DemoPageType = typeof(WinComposition.Playground.Views.CheckerboardView)
             });
@@ -30,9 +30,9 @@ namespace WinComposition.Playground.ViewModels {
 
             demoItems.Add(new DemoItem
             {
-                DemoName = "Loading",
+                DemoName = "Checkerboard (Rotate animation)",
                 DocPath = "/Docs/Checkerboard2.html",
-                DemoPageType = typeof(WinComposition.Playground.Views.Start)
+                DemoPageType = typeof(WinComposition.Playground.Views.CheckerboardSpin)
             });
             DemoItems = demoItems;
         }
