@@ -99,7 +99,7 @@
     <Compile Include="DemoViewer.xaml.cs">
       <DependentUpon>DemoViewer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\App.xaml.cs">
+    <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="ChildPageLoadedMessage.cs" />
@@ -159,7 +159,7 @@
     <Content Include="Readme2.css" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="Views\App.xaml">
+    <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
