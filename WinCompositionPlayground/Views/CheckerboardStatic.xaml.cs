@@ -20,8 +20,8 @@ using Windows.UI.Xaml.Shapes;
 
 namespace WinComposition.Playground.Views {
 
-	public sealed partial class Checkerboard2 : Page {
-		public Checkerboard2() {
+	public sealed partial class CheckerboardStatic : Page {
+		public CheckerboardStatic() {
 			this.InitializeComponent();
 			
 			this.DataContext = SetupSquares(3000);
@@ -30,6 +30,7 @@ namespace WinComposition.Playground.Views {
 
 		private void Page_Loaded(object sender, RoutedEventArgs e) {
 			Messenger.Default.Send(new ChildPageLoadedMessage());
+            MainGrid.Visibility = Visibility.Visible;
 		}
 
 		private ObservableCollection<Rectangle> SetupSquares(int count) {
