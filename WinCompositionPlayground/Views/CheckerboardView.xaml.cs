@@ -68,9 +68,10 @@ namespace WinComposition.Playground.Views {
 
 				compositor = visual.Compositor;
 				var fadeAnimation = compositor.CreateScalarKeyFrameAnimation();
-				fadeAnimation.InsertKeyFrame(0.0f, 0.0f);
-				fadeAnimation.InsertKeyFrame(0.5f, 1.00f);
-				fadeAnimation.InsertKeyFrame(1.0f, 0.00f);
+				fadeAnimation.InsertKeyFrame(0.0f, 0.5f);
+				fadeAnimation.InsertKeyFrame(0.3f, 1.00f);
+				fadeAnimation.InsertKeyFrame(0.6f, 0.00f);
+				fadeAnimation.InsertKeyFrame(1.0f, 0.50f);
 				fadeAnimation.Duration = TimeSpan.FromMilliseconds(ran.Next(8000, 24000));
 				fadeAnimation.DelayTime = TimeSpan.FromMilliseconds(ran.Next(0, 2000));
 

@@ -61,7 +61,7 @@ namespace WinComposition.Playground {
             Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", "/Docs/Checkerboard1.html");
             StreamUriWinRTResolver resolver = new StreamUriWinRTResolver();
             ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
-            DemoFrame.Navigate(typeof(Views.Start));
+            DemoFrame.Navigate(typeof(Views.CheckerboardSpin));
 
 
         }
