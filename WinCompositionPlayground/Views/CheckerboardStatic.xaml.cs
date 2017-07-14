@@ -1,42 +1,43 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Threading.Tasks;
 using WinComposition.Playground.Models;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using WinComposition.Playground.ViewModels;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Shapes;
 
-namespace WinComposition.Playground.Views {
-
-	public sealed partial class CheckerboardStatic : Page {
-		public CheckerboardStatic() {
+namespace WinComposition.Playground.Views
+{
+	public sealed partial class CheckerboardStatic : Page
+	{
+		public CheckerboardStatic()
+		{
 			this.InitializeComponent();
 
-			var datasource = new DemoDataSource();
-			this.DataContext = datasource.GetSensors();
+			//var datasource = new DemoDataSource();
+			this.DataContext = new SensorsViewModel();
 			//this.DataContext = SetupSquares(3000);
 			this.Loaded += Page_Loaded;
+
+			DataContextChanged += (s, e) =>
+				{
+					CurrentViewModel = DataContext as SensorsViewModel;
+				};
 		}
 
-		private void Page_Loaded(object sender, RoutedEventArgs e) {
+		private void Page_Loaded(object sender, RoutedEventArgs e)
+		{
 			Messenger.Default.Send(new ChildPageLoadedMessage());
-            MainGrid.Visibility = Visibility.Visible;
+			MainGrid.Visibility = Visibility.Visible;
 		}
 
-		private ObservableCollection<Rectangle> SetupSquares(int count) {
+		public SensorsViewModel CurrentViewModel { get; set; }
+
+		private ObservableCollection<Rectangle> SetupSquares(int count)
+		{
 			var squares = new ObservableCollection<Rectangle>();
 			Rectangle square;
 			Random ran = new Random();
@@ -58,11 +59,8 @@ namespace WinComposition.Playground.Views {
 					square.Fill = new SolidColorBrush(Colors.Purple);
 				}
 				squares.Add(square);
-
-
 			}
 			return squares;
-		
 		}
 	}
 }

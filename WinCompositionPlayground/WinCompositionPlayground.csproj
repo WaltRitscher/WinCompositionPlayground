@@ -109,6 +109,7 @@
     <Compile Include="StreamUriWinRTResolver.cs" />
     <Compile Include="ValueConverters\StrengthToColorConverter.cs" />
     <Compile Include="ViewModels\DemosViewModel.cs" />
+    <Compile Include="ViewModels\SensorsViewModel.cs" />
     <Compile Include="Views\CheckerboardStatic.xaml.cs">
       <DependentUpon>CheckerboardStatic.xaml</DependentUpon>
     </Compile>
