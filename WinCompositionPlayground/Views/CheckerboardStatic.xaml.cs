@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using WinComposition.Playground.Models;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
@@ -23,8 +24,10 @@ namespace WinComposition.Playground.Views {
 	public sealed partial class CheckerboardStatic : Page {
 		public CheckerboardStatic() {
 			this.InitializeComponent();
-			
-			this.DataContext = SetupSquares(3000);
+
+			var datasource = new DemoDataSource();
+			this.DataContext = datasource.GetSensors();
+			//this.DataContext = SetupSquares(3000);
 			this.Loaded += Page_Loaded;
 		}
 
