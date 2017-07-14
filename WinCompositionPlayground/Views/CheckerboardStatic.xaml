@@ -18,7 +18,7 @@
 		          IsMultiSelectCheckBoxEnabled="False"
 		          IsSwipeEnabled="False"
 		          ItemContainerStyle="{StaticResource GridViewItemStyle1}"
-		          ItemsSource="{x:Bind CurrentViewModel.SensorList}"
+		          ItemsSource="{x:Bind ViewModel.SensorList}"
 		          ManipulationMode="None"
 		          ScrollViewer.HorizontalScrollBarVisibility="Hidden"
 		          ScrollViewer.VerticalScrollBarVisibility="Hidden"

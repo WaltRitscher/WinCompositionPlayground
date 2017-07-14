@@ -10,7 +10,7 @@ namespace WinComposition.Playground.Models
 	public class DemoDataSource
 	{
 		private ObservableCollection<Sensor> _sensors = new ObservableCollection<Sensor>();
-		private int _count = 3000;
+		private int _count = 2000;
 		public DemoDataSource()
 		{
 			//var squares = new ObservableCollection<Rectangle>();
