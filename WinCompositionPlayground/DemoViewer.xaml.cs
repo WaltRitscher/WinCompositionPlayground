@@ -35,7 +35,7 @@ namespace WinComposition.Playground
 			{
 				Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", demoItem.DocPath);
 				var resolver = new StreamUriWinRTResolver();
-				//ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
+				ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
 				await Dispatcher.RunAsync(CoreDispatcherPriority.Low, ChangeTextCallBack);
 			}
 		}
@@ -55,7 +55,7 @@ namespace WinComposition.Playground
 		{
 			Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", "/Docs/Checkerboard1.html");
 			var resolver = new StreamUriWinRTResolver();
-		//	ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
+			ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
 			DemoFrame.Navigate(typeof(Views.CheckerboardStatic));
 		}
 

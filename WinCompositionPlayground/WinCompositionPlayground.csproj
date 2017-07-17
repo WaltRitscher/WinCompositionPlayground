@@ -110,6 +110,12 @@
     <Compile Include="ValueConverters\StrengthToColorConverter.cs" />
     <Compile Include="ViewModels\DemosViewModel.cs" />
     <Compile Include="ViewModels\SensorsViewModel.cs" />
+    <Compile Include="Views\Animation\Batches.xaml.cs">
+      <DependentUpon>Batches.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CheckerboardGet.xaml.cs">
+      <DependentUpon>CheckerboardGet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CheckerboardStatic.xaml.cs">
       <DependentUpon>CheckerboardStatic.xaml</DependentUpon>
     </Compile>
@@ -135,8 +141,14 @@
     <None Include="WinCompostionPlayground_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Robot01.png" />
+    <Content Include="Assets\Robot02.png" />
+    <Content Include="Assets\Robot03.png" />
     <Content Include="Assets\Start1.png" />
     <Content Include="Assets\Start2.png" />
+    <Content Include="Docs\CheckerboardGet.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Docs\Start.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -169,6 +181,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="DemoViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Animation\Batches.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CheckerboardGet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

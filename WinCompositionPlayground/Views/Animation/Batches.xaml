@@ -1,0 +1,51 @@
+﻿<Page x:Class="WinComposition.Playground.Views.Animation.Batches"
+			xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			xmlns:local="using:WinComposition.Playground.Views.Animation"
+			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			mc:Ignorable="d">
+
+	<Grid x:Name="MainGrid"
+				Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="2*" />
+			<ColumnDefinition Width="2*" />
+			<ColumnDefinition Width="2*" />
+		</Grid.ColumnDefinitions>
+		<CommandBar Grid.ColumnSpan="3"
+								ClosedDisplayMode="Compact"
+								IsSticky='True'
+								IsOpen="True">
+			<CommandBar.PrimaryCommands>
+				<AppBarButton Click="AppBarButton_Click"
+											Content="Move Animation"
+											Icon='Play'
+											Label='Move' />
+				<AppBarButton x:Name='RotateButton'
+											Click="RotateButton_Click"
+											Content="Rotate Animation"
+											Icon='Placeholder'
+											Label='Rotate' />
+				<AppBarButton x:Name='GrowButton'
+											Click="GrowButton_Click"
+											Content="Grow Animation"
+											Icon='Flag'
+											Label='Grow' />
+
+			</CommandBar.PrimaryCommands>
+		</CommandBar>
+		<Image x:Name="GreenRobot"
+					 Grid.Column="0"
+					 Height="230"
+					 Source='ms-appx:///Assets/Robot01.png' />
+		<Image x:Name="RedRobot"
+					 Grid.Column="1"
+					 Height="230" 
+					 Source='ms-appx:///Assets/Robot03.png' />
+		<Image x:Name="BlueRobot"
+					 Grid.Column="2"
+					 Height="230"
+					 Source='ms-appx:///Assets/Robot02.png' />
+	</Grid>
+</Page>

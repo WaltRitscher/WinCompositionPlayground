@@ -45,7 +45,7 @@ namespace WinComposition.Playground.Views {
 			Visual visual;
 			Rectangle square;
 			Random ran = new Random();
-			for (int counter = 0; counter < 3000; counter++)
+			for (int counter = 0; counter < 2000; counter++)
 			{
 				square = new Rectangle
 				{
