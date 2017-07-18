@@ -50,14 +50,9 @@ namespace WinComposition.Playground.Views.Animation
 			SetupVisual();
 		}
 
-		private void AppBarButton_Click(object sender, RoutedEventArgs e)
-		{
-			MoveAnimation(_greenVisual);
-		}
-
 		private void SetupVisual()
 		{
-			_compositor = ElementCompositionPreview.GetElementVisual(MainGrid).Compositor; 
+			_compositor = ElementCompositionPreview.GetElementVisual(MainGrid).Compositor;
 
 			_greenVisual = ElementCompositionPreview.GetElementVisual(GreenRobot);
 			_redVisual = ElementCompositionPreview.GetElementVisual(RedRobot);
@@ -66,20 +61,76 @@ namespace WinComposition.Playground.Views.Animation
 
 
 		}
-		public void MoveAnimation(Visual targetVisual)
+
+		private void AppBarButton_Click(object sender, RoutedEventArgs e)
+		{
+			greenRobotMessage.Text = "Animation Started";
+			var moveBatch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
+			moveBatch.Completed += MoveBatch_Completed;
+			var animation = CreateMoveAnimation(_greenVisual);
+			_greenVisual.StartAnimation("Offset", animation);
+			moveBatch.End();
+			
+		}
+
+		private void RotateButton_Click(object sender, RoutedEventArgs e)
+		{
+			redRobotMessage.Text = "Animation Started";
+			var rotateBatch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
+			rotateBatch.Completed += RotateBatch_Completed;
+			var animation = CreateRotateAnimation(_redVisual);
+			_redVisual.StartAnimation("RotationAngleinDegrees", animation);
+			
+			rotateBatch.End();
+		}
+
+		private void RotateBatch_Completed(object sender, CompositionBatchCompletedEventArgs args)
+		{
+
+			redRobotMessage.Text = "Animation Completed";
+		}
+
+		private void GrowButton_Click(object sender, RoutedEventArgs e)
+		{
+			
+				blueRobotMessage.Text = "Animation Started";
+				var growBatch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
+			growBatch.Completed += GrowBatch_Completed; ;
+				var animation = CreateGrowAnimation(_blueVisual);
+
+				_blueVisual.StartAnimation("Scale", animation);
+				growBatch.End();
+			
+		}
+
+		private void GrowBatch_Completed(object sender, CompositionBatchCompletedEventArgs args)
+		{
+			blueRobotMessage.Text = "Animation Completed";
+		}
+
+		private void MoveBatch_Completed(object sender, CompositionBatchCompletedEventArgs args)
+		{
+			greenRobotMessage.Text = "Animation Completed";
+		}
+
+	
+		public Vector3KeyFrameAnimation CreateMoveAnimation(Visual targetVisual)
 		{
 			var moveAnim = _compositor.CreateVector3KeyFrameAnimation();
+		
 
 			moveAnim.InsertKeyFrame(0.2f, new Vector3(0.0f, 50, 0.0f));
 			moveAnim.InsertKeyFrame(0.4f, new Vector3(50.0f, 50, 0.0f));
 			moveAnim.InsertKeyFrame(0.7f, new Vector3(50.0f, 0, 0.0f));
 			moveAnim.InsertKeyFrame(1.0f, new Vector3(0f, 0f, 0.0f));
 			moveAnim.Duration = TimeSpan.FromMilliseconds(2000);
+			return moveAnim;
 
-			targetVisual.StartAnimation("Offset", moveAnim);
 		}
 
-		public void RotateAnimation(Visual targetVisual)
+
+		
+		public ScalarKeyFrameAnimation CreateRotateAnimation(Visual targetVisual)
 		{
 			var rotateAnim = _compositor.CreateScalarKeyFrameAnimation();
 			var easing = _compositor.CreateLinearEasingFunction();
@@ -100,13 +151,13 @@ namespace WinComposition.Playground.Views.Animation
 
 
 			rotateAnim.Duration = TimeSpan.FromMilliseconds(4000);
-			//rotateAnim.IterationCount = 2;
+			return rotateAnim;
+
 		
-			targetVisual.StartAnimation("RotationAngleinDegrees", rotateAnim);
 		}
 
-	
-	public void GrowAnimation(Visual targetVisual)
+
+		public Vector3KeyFrameAnimation CreateGrowAnimation(Visual targetVisual)
 	{
 		var growAnim = _compositor.CreateVector3KeyFrameAnimation();
 
@@ -114,17 +165,9 @@ namespace WinComposition.Playground.Views.Animation
 		growAnim.InsertKeyFrame(1.0f, new Vector3(1f, 1f, 1f));
 		growAnim.Duration = TimeSpan.FromMilliseconds(2000);
 
-		targetVisual.StartAnimation("Scale", growAnim);
+				return growAnim;
 	}
 
-	private void RotateButton_Click(object sender, RoutedEventArgs e)
-		{
-			RotateAnimation(_redVisual);
-		}
-
-		private void GrowButton_Click(object sender, RoutedEventArgs e)
-		{
-			GrowAnimation(_blueVisual);
-		}
+	
 	}
 }
