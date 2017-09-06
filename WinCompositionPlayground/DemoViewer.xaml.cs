@@ -36,11 +36,11 @@ namespace WinComposition.Playground
 				Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", demoItem.DocPath);
 				var resolver = new StreamUriWinRTResolver();
 				ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
-				await Dispatcher.RunAsync(CoreDispatcherPriority.Low, ChangeTextCallBack);
+				await Dispatcher.RunAsync(CoreDispatcherPriority.Low, NavigateToDemoPage);
 			}
 		}
 
-		public void ChangeTextCallBack()
+		public void NavigateToDemoPage()
 		{
 			var demoItem = TocListView.SelectedItem as DemoItem;
 			DemoFrame.Navigate(demoItem.DemoPageType);
