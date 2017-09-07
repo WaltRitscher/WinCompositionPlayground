@@ -1,23 +1,14 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Numerics;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI;
 using Windows.UI.Composition;
 using Windows.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Hosting;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,29 +21,26 @@ namespace WinComposition.Playground.Views.Fun
   {
     private Compositor _compositor;
 
-    private float _offsetBlue = 1;
-    private DispatcherTimer _timer = new DispatcherTimer();
-    ContainerVisual _mainContainer;
+    private ContainerVisual _mainContainer;
     private PointerPoint _point;
     private Random _random = new Random();
+    private float _offsetBlue = 1;
+    private int _offsetRed = 45;
+    private int _offsetGreen = 120;
 
     public TrailingShapes()
     {
       this.InitializeComponent();
       this.Loaded += MainPage_Loaded;
-
       this.PointerMoved += MainPage_PointerMoved;
     }
+
     private void MainPage_PointerMoved(object sender, PointerRoutedEventArgs e)
     {
       _point = e.GetCurrentPoint(this);
-      var x = Colors.AliceBlue;
-
       CreateSprite(Color.FromArgb(0x30, 0x00, 0x90, 0x00));
-
-      
-
     }
+
     private void MainPage_Loaded(object sender, RoutedEventArgs e)
     {
       Messenger.Default.Send(new ChildPageLoadedMessage());
@@ -62,66 +50,78 @@ namespace WinComposition.Playground.Views.Fun
 
       _mainContainer = _compositor.CreateContainerVisual();
       ElementCompositionPreview.SetElementChildVisual(MainGrid, _mainContainer);
-
-     
     }
-    private int _offsetRed = 45;
-    private int _offsetGreen = 120;
+
     private void CreateSprite(Color selectedColor)
     {
-      selectedColor = CreateNextColor(selectedColor);
+      SpriteVisual colorVisual = CreateVisual(selectedColor);
+      var opacityAnimation = CreateOpacityAnimation(colorVisual);
+      //if (_offsetBlue % 20 != 0)
+      //{
+      //  colorVisual.StartAnimation("Opacity", opacityAnimation);
+      //}
+
+      colorVisual.StartAnimation(nameof(colorVisual.Opacity), opacityAnimation);
+
+      #region Rotation animation
+
+      //rotation animation
+      var rotationAnimation = CreateRotateAnimation();
+      colorVisual.StartAnimation(nameof(colorVisual.RotationAngleInDegrees), rotationAnimation);
+
+      #endregion Rotation animation
+
+      var easing2 = _compositor.CreateCubicBezierEasingFunction(new Vector2(0.1f, 0.9f), new Vector2(0.6f, 1f));
+
+      var batch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
+
+      var sizeAnimation = CreateSizeAnimation();
+
+      colorVisual.StartAnimation("Size.X", sizeAnimation);
+      colorVisual.StartAnimation("Size.Y", sizeAnimation);
+
+      batch.Completed += Batch_Completed;
+
+      batch.End();
+      _mainContainer.Children.InsertAtTop(colorVisual);
+    }
+
+    private ScalarKeyFrameAnimation CreateSizeAnimation()
+    {
+      var easing1 = _compositor.CreateCubicBezierEasingFunction(new Vector2(0.9f, 0.1f), new Vector2(0.1f, 1f));
+      var sizeAnimation = _compositor.CreateScalarKeyFrameAnimation();
+      sizeAnimation.InsertKeyFrame(0.0f, 0.00f, easing1);
+      sizeAnimation.InsertKeyFrame(0.5f, 60.00f);
+      sizeAnimation.InsertKeyFrame(1.0f, 0.00f, easing1);
+      sizeAnimation.Duration = TimeSpan.FromMilliseconds(4000);
+      // sizeAnimation.IterationBehavior = AnimationIterationBehavior.Count;
+      // sizeAnimation.IterationCount = 4;
+
+      return sizeAnimation;
+    }
+
+    private ScalarKeyFrameAnimation CreateOpacityAnimation(SpriteVisual colorVisual)
+    {
+      var opacityAnimation = _compositor.CreateScalarKeyFrameAnimation();
+
+      opacityAnimation.InsertKeyFrame(0.0f, .70f);
+      opacityAnimation.InsertKeyFrame(1.0f, 0.00f);
+
+      opacityAnimation.Duration = TimeSpan.FromMilliseconds(_random.Next(2000, 4000));
+
+      return opacityAnimation;
+    }
+
+    private SpriteVisual CreateVisual(Color selectedColor)
+    {
       var colorVisual = _compositor.CreateSpriteVisual();
-      colorVisual.Brush = _compositor.CreateColorBrush(selectedColor);
+      colorVisual.Brush = _compositor.CreateColorBrush(CreateNextColor(selectedColor));
       colorVisual.CenterPoint = new Vector3(colorVisual.Size.X / 2, colorVisual.Size.Y / 2, 0);
-      var clip = _compositor.CreateInsetClip();
-
-
-
 
       colorVisual.Size = new Vector2(120.0f, 120.0f);
       colorVisual.Offset = new Vector3((float)_point.Position.X, (float)_point.Position.Y, 0.0f);
       colorVisual.Opacity = 0.7f;
-
-      var animation = _compositor.CreateScalarKeyFrameAnimation();
-      // Create two keyframes that define starting and ending value of the property
-
-      animation.InsertKeyFrame(0.0f, .70f);
-      animation.InsertKeyFrame(1.0f, 0.00f);
-
-      animation.Duration = TimeSpan.FromMilliseconds(_random.Next(2000, 4000));
-
-      if (_offsetBlue % 20 != 0)
-      {
-        colorVisual.StartAnimation("Opacity", animation);
-      }
-      var rotationAnimation = _compositor.CreateScalarKeyFrameAnimation();
-      var easingAnimation = _compositor.CreateCubicBezierEasingFunction(new Vector2(0.9f, 0.1f), new Vector2(0.1f, 1f));
-      rotationAnimation.InsertKeyFrame(0.0f, (float)_random.Next(-50, 50), easingAnimation);
-      rotationAnimation.InsertKeyFrame(1.0f, (float)_random.Next(-90, 90));
-      rotationAnimation.Duration = TimeSpan.FromMilliseconds(_random.Next(6000, 9000));
-
-      colorVisual.StartAnimation("RotationAngleInDegrees", rotationAnimation);
-
-
-      var batch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
-
-      var sizeAnimation = _compositor.CreateScalarKeyFrameAnimation();
-      var easingAnimation2 = _compositor.CreateCubicBezierEasingFunction(new Vector2(0.1f, 0.9f), new Vector2(0.6f, 1f));
-      sizeAnimation.InsertKeyFrame(0.0f, 0.00f, easingAnimation);
-      sizeAnimation.InsertKeyFrame(0.5f, 60.00f);
-      sizeAnimation.InsertKeyFrame(1.0f, 0.00f);
-      sizeAnimation.Duration = TimeSpan.FromMilliseconds(4000);
-      sizeAnimation.IterationBehavior = AnimationIterationBehavior.Count;
-      // sizeAnimation.IterationCount = 4;
-
-
-      colorVisual.StartAnimation("Size.X", sizeAnimation);
-      colorVisual.StartAnimation("Size.Y", sizeAnimation);
-      batch.Completed += Batch_Completed;
-
-
-      batch.End();
-      _mainContainer.Children.InsertAtTop(colorVisual);
+      return colorVisual;
     }
 
     private Color CreateNextColor(Color selectedColor)
@@ -138,6 +138,16 @@ namespace WinComposition.Playground.Views.Fun
     private void Batch_Completed(object sender, CompositionBatchCompletedEventArgs args)
     {
       _mainContainer.Children.Remove(_mainContainer.Children.First());
+    }
+
+    public ScalarKeyFrameAnimation CreateRotateAnimation()
+    {
+      var currentAnimation = _compositor.CreateScalarKeyFrameAnimation();
+      var easingAnimation = _compositor.CreateCubicBezierEasingFunction(new Vector2(0.9f, 0.1f), new Vector2(0.1f, 1f));
+      currentAnimation.InsertKeyFrame(0.0f, (float)_random.Next(-50, 50), easingAnimation);
+      currentAnimation.InsertKeyFrame(1.0f, (float)_random.Next(-90, 90));
+      currentAnimation.Duration = TimeSpan.FromMilliseconds(_random.Next(6000, 9000));
+      return currentAnimation;
     }
   }
 }
