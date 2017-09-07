@@ -141,6 +141,9 @@
     <Compile Include="Views\Effects\SimpleDropShadow.xaml.cs">
       <DependentUpon>SimpleDropShadow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Fun\TrailingShapes.xaml.cs">
+      <DependentUpon>TrailingShapes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StartHere.xaml.cs">
       <DependentUpon>StartHere.xaml</DependentUpon>
     </Compile>
@@ -229,6 +232,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Effects\SimpleDropShadow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Fun\TrailingShapes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -58,6 +58,13 @@ namespace WinComposition.Playground.ViewModels
         DocPath = "/Docs/Checkerboard2.html",
         DemoPageType = typeof(WinComposition.Playground.MainPage)
       });
+
+      demoItems.Add(new DemoItem
+      {
+        DemoName = "Trailing Shapes",
+        DocPath = "/Docs/Checkerboard2.html",
+        DemoPageType = typeof(WinComposition.Playground.Views.Fun.TrailingShapes)
+      });
       DemoItems = demoItems;
     }
 
