@@ -44,7 +44,22 @@ namespace WinComposition.Playground.ViewModels
 				DemoPageType = typeof(WinComposition.Playground.Views.CheckerboardSpin)
 			});
 			DemoItems = demoItems;
-		}
+
+      demoItems.Add(new DemoItem
+      {
+        DemoName = "Add Drop Shadow",
+        DocPath = "/Docs/Checkerboard2.html",
+        DemoPageType = typeof(WinComposition.Playground.Views.Effects.SimpleDropShadow)
+      });
+
+      demoItems.Add(new DemoItem
+      {
+        DemoName = "First Experiment",
+        DocPath = "/Docs/Checkerboard2.html",
+        DemoPageType = typeof(WinComposition.Playground.MainPage)
+      });
+      DemoItems = demoItems;
+    }
 
 		public List<DemoItem> DemoItems {
 			get;

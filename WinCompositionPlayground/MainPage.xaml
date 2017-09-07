@@ -9,7 +9,7 @@
 		<Grid x:Name='MainGrid'
 				Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-		</Grid>
+		</Grid>	
 </Page>
 
     

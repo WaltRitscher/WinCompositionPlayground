@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="WinComposition.Playground.Views.Effects.BlurPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<Image x:Name="RedRobot"
+					 Grid.Column="1"
+					 MinHeight="230" HorizontalAlignment='Center' VerticalAlignment='Center'
+					 Source="ms-appx:///Assets/Robot03.png" />
+	</Grid>
+</Page>

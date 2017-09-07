@@ -36,8 +36,10 @@ namespace WinComposition.Playground
 				Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", demoItem.DocPath);
 				var resolver = new StreamUriWinRTResolver();
 				ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
-				await Dispatcher.RunAsync(CoreDispatcherPriority.Low, NavigateToDemoPage);
-			}
+      await Dispatcher.RunAsync(CoreDispatcherPriority.Low, NavigateToDemoPage);
+        //NavigateToDemoPage
+
+      }
 		}
 
 		public void NavigateToDemoPage()
@@ -56,7 +58,7 @@ namespace WinComposition.Playground
 			Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", "/Docs/Checkerboard1.html");
 			var resolver = new StreamUriWinRTResolver();
 			ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
-			DemoFrame.Navigate(typeof(Views.CheckerboardStatic));
+			DemoFrame.Navigate(typeof(Views.StartHere));
 		}
 
 		private void ChildPageLoaded(ChildPageLoadedMessage msg)

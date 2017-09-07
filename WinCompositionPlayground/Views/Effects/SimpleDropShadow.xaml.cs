@@ -31,10 +31,11 @@ namespace WinComposition.Playground.Views.Effects
     public SimpleDropShadow()
     {
       this.InitializeComponent();
-      this.Loaded += Batches_Loaded;
+      RedRobot.Loaded += Grid_Loaded;
+      
     }
 
-    private void Batches_Loaded(object sender, RoutedEventArgs e)
+    private void Grid_Loaded(object sender, RoutedEventArgs e)
     {
       Messenger.Default.Send(new ChildPageLoadedMessage());
       SetupVisual();
@@ -44,22 +45,26 @@ namespace WinComposition.Playground.Views.Effects
     {
       _compositor = ElementCompositionPreview.GetElementVisual(RedRobot).Compositor;
 
-     // var myVisual = ElementCompositionPreview.GetElementVisual(RedRobot);
+     
+   
+      var sprite = _compositor.CreateSpriteVisual();
+      sprite.Size = new System.Numerics.Vector2((float)RedRobot.ActualWidth, (float)RedRobot.ActualHeight);
 
-      // create a blue drop shadow
       var shadow = _compositor.CreateDropShadow();
-      var x = _compositor.CreateSpriteVisual();
-      x.Size = new System.Numerics.Vector2((float)RedRobot.ActualWidth, (float)RedRobot.ActualHeight);
-      x.Size = new System.Numerics.Vector2((float)100, (float)100);
-      shadow.Offset = new System.Numerics.Vector3(30, 30, 0);
-      shadow.Color = Colors.DarkBlue;
-      x.Shadow = shadow;
+      shadow.Offset = new System.Numerics.Vector3(3, 3, 0);
+      shadow.Color = Colors.Red;
+      var colorBrush = _compositor.CreateColorBrush(Colors.Green);
+      sprite.Shadow = shadow;
+      sprite.Brush = colorBrush;
 
+    
       // render on page
-      ElementCompositionPreview.SetElementChildVisual(this, x);
+      ElementCompositionPreview.SetElementChildVisual(RedRobot,sprite);
     }
 
-
-
+    private void RedRobot_PointerMoved(object sender, PointerRoutedEventArgs e)
+    {
+      var x = RedRobot.ActualWidth;
+    }
   }
 }

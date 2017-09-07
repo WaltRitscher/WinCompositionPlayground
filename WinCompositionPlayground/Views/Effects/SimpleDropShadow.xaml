@@ -8,9 +8,14 @@
 
 	<Grid x:Name="MainGrid"
 	      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<Image x:Name="RedRobot"
-					 Grid.Column="1"
-					 Height="230"
-					 Source="ms-appx:///Assets/Robot03.png" />
+		<Canvas x:Name="ShadowCanvas"
+						HorizontalAlignment='Center' VerticalAlignment='Center'/>
+		<Image x:Name="RedRobot" 
+					HorizontalAlignment='Center' VerticalAlignment='Center'
+					Height='230' Width='200'
+					 Source='ms-appx:///Assets/Robot03.png'>
+			
+
+		</Image>
 	</Grid>
 </Page>

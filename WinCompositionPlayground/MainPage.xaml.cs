@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -44,15 +45,15 @@ namespace WinComposition.Playground {
 
 			CreateSprite(Color.FromArgb(0x30, 0x00, 0x90, 0x00));
 
-			if (_mainContainer.Children.Count > 400)
+			if (_mainContainer.Children.Count > 600)
 			{
-				_mainContainer.Children.Remove(_mainContainer.Children.First());
+				//_mainContainer.Children.Remove(_mainContainer.Children.First());
 			}
 
 		}
 		private void MainPage_Loaded(object sender, RoutedEventArgs e) {
-
-			_compositor = new Compositor();
+      Messenger.Default.Send(new ChildPageLoadedMessage());
+      _compositor = new Compositor();
 			 var root = ElementCompositionPreview.GetElementVisual(MainGrid);
 			_compositor = root.Compositor;
 
@@ -74,10 +75,10 @@ namespace WinComposition.Playground {
 			colorVisual.Brush = _compositor.CreateColorBrush(selectedColor);
 			colorVisual.CenterPoint = new Vector3(colorVisual.Size.X / 2, colorVisual.Size.Y / 2, 0);
 			var clip = _compositor.CreateInsetClip();
-
+      
 			//clip.TopInset = 30.6f;
 			// clip.BottomInset = 30.6f;
-			colorVisual.Clip = clip;
+			//colorVisual.Clip = clip;
 
 			// colorVisual.RotationAngleInDegrees = 45f;
 			//  ElementCompositionPreview.
@@ -92,7 +93,7 @@ namespace WinComposition.Playground {
 			// Create two keyframes that define starting and ending value of the property
 
 			animation.InsertKeyFrame(0.0f, .70f);
-			animation.InsertKeyFrame(1.0f, 0.00f);
+      animation.InsertKeyFrame(1.0f, 0.00f);
 
 			animation.Duration = TimeSpan.FromMilliseconds(_random.Next(2000, 4000));
 
@@ -109,16 +110,20 @@ namespace WinComposition.Playground {
 			colorVisual.StartAnimation("RotationAngleInDegrees", rotationAnimation);
 
 
+      var batch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
 
-
-			var sizeAnimation = _compositor.CreateScalarKeyFrameAnimation();
+      var sizeAnimation = _compositor.CreateScalarKeyFrameAnimation();
 			var easingAnimation2 = _compositor.CreateCubicBezierEasingFunction(new Vector2(0.1f, 0.9f), new Vector2(0.6f, 1f));
 			sizeAnimation.InsertKeyFrame(0.0f, 0.00f, easingAnimation);
-			sizeAnimation.InsertKeyFrame(1.0f, 90.00f);
+     // sizeAnimation.InsertKeyFrame(0.2f, 90.00f);
+      sizeAnimation.InsertKeyFrame(0.5f, 60.00f);
+    //  sizeAnimation.InsertKeyFrame(0.7f, 90.00f);
+      sizeAnimation.InsertKeyFrame(1.0f, 0.00f);
 			sizeAnimation.Duration = TimeSpan.FromMilliseconds(4000);
-
+      sizeAnimation.IterationBehavior = AnimationIterationBehavior.Count;
+     // sizeAnimation.IterationCount = 4;
 			//var sizeAnimation2 = _compositor.CreateScalarKeyFrameAnimation();
-			//var easingAnimation3 = _compositor.CreateCubicBezierEasingFunction(new Vector2(0.2f, 0.5f), new Vector2(0.6f, 1f));
+			//var easingAnimation3 d= _compositor.CreateCubicBezierEasingFunction(new Vector2(0.2f, 0.5f), new Vector2(0.6f, 1f));
 			//sizeAnimation.InsertKeyFrame(0.0f, 0.00f, easingAnimation);
 			//sizeAnimation.InsertKeyFrame(1.0f, 100.00f);
 			//sizeAnimation.Duration = TimeSpan.FromMilliseconds(6000);
@@ -127,15 +132,18 @@ namespace WinComposition.Playground {
 			colorVisual.StartAnimation("Size.Y", sizeAnimation);
 		//	var a = colorVisual.GetPropertyName(() => colorVisual.Size.X);
 
-			_mainContainer.Children.InsertAtTop(colorVisual);
+			
 
-			//var batch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
-			//batch.Completed += Batch_Completed;
+      
+      batch.Completed += Batch_Completed;
 
 
-		}
-		//private void Batch_Completed(object sender, CompositionBatchCompletedEventArgs args) {
-
-		//}
-	}
+      batch.End();
+      _mainContainer.Children.InsertAtTop(colorVisual);
+    }
+    private void Batch_Completed(object sender, CompositionBatchCompletedEventArgs args)
+    {
+      _mainContainer.Children.Remove(_mainContainer.Children.First());
+    }
+  }
 }

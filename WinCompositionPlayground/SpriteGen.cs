@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 using Windows.UI;
 using Windows.UI.Composition;
 
-// Created by Walt Ritscher
+// Examples created by Walt Ritscher
 // https://www.linkedin.com/in/waltritscher
-// I'm a staff author at Lynda.com, part of the LinkedIn family. 
+// I'm a staff instructor at LinkedIn Learning, part of the LinkedIn family. 
 // My content team produces hundreds of technical training courses for software developers each year.
 
-// Lynda.com has over 5000 courses (Topics include IT (dev, devops, web), creative, business, photography, music and lots of documentaries).
+// Lynda.com has over 10,000 courses 
+// (Topics include IT (dev, devops, web), 
+//  creative, business, photography, music and lots of documentaries).
 // Get your free trial at http://lynda.com
 // My courses are at http://lynda.com/waltritscher
 // 

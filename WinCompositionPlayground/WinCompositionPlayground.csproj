@@ -11,8 +11,8 @@
     <AssemblyName>WinCompositionPlayground</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -89,8 +89,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagrams\BrushDiagram.cd" />
+    <None Include="ClassDiagrams\ClassDiagram1.cd" />
     <None Include="AllWinCompClassDiagram.cd" />
+    <None Include="ClassDiagrams\EffectsDiagram.cd" />
     <None Include="PanelsDiagram.cd" />
     <None Include="project.json" />
   </ItemGroup>
@@ -133,6 +135,15 @@
     <Compile Include="TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Effects\BlurPage.xaml.cs">
+      <DependentUpon>BlurPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Effects\SimpleDropShadow.xaml.cs">
+      <DependentUpon>SimpleDropShadow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartHere.xaml.cs">
+      <DependentUpon>StartHere.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -141,6 +152,7 @@
     <None Include="WinCompostionPlayground_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AbstractCurtain.jpeg" />
     <Content Include="Assets\Robot01.png" />
     <Content Include="Assets\Robot02.png" />
     <Content Include="Assets\Robot03.png" />
@@ -209,6 +221,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="TestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Effects\BlurPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Effects\SimpleDropShadow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StartHere.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
