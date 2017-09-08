@@ -54,6 +54,13 @@ namespace WinComposition.Playground.ViewModels
 
       demoItems.Add(new DemoItem
       {
+        DemoName = "Ellipse Shadow",
+        DocPath = "/Docs/Checkerboard2.html",
+        DemoPageType = typeof(WinComposition.Playground.Views.Effects.EllipseShadow)
+      });
+
+      demoItems.Add(new DemoItem
+      {
         DemoName = "First Experiment",
         DocPath = "/Docs/Checkerboard2.html",
         DemoPageType = typeof(WinComposition.Playground.MainPage)

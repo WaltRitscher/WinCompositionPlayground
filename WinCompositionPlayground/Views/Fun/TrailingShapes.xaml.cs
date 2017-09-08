@@ -85,7 +85,28 @@ namespace WinComposition.Playground.Views.Fun
       batch.End();
       _mainContainer.Children.InsertAtTop(colorVisual);
     }
+    private SpriteVisual CreateVisual(Color selectedColor)
+    {
+      var colorVisual = _compositor.CreateSpriteVisual();
+      colorVisual.Brush = _compositor.CreateColorBrush(CreateNextColor(selectedColor));
+      colorVisual.CenterPoint = new Vector3(colorVisual.Size.X / 2, colorVisual.Size.Y / 2, 0);
 
+      colorVisual.Size = new Vector2(120.0f, 120.0f);
+      colorVisual.Offset = new Vector3((float)_point.Position.X, (float)_point.Position.Y, 0.0f);
+      colorVisual.Opacity = 0.7f;
+      return colorVisual;
+    }
+
+    private Color CreateNextColor(Color selectedColor)
+    {
+      _offsetBlue += 1;
+      _offsetRed += 2;
+      _offsetGreen += 1;
+      selectedColor.B = (byte)_offsetBlue;
+      selectedColor.R = (byte)_offsetRed;
+      selectedColor.G = (byte)_offsetGreen;
+      return selectedColor;
+    }
     private ScalarKeyFrameAnimation CreateSizeAnimation()
     {
       var easing1 = _compositor.CreateCubicBezierEasingFunction(new Vector2(0.9f, 0.1f), new Vector2(0.1f, 1f));
@@ -112,28 +133,7 @@ namespace WinComposition.Playground.Views.Fun
       return opacityAnimation;
     }
 
-    private SpriteVisual CreateVisual(Color selectedColor)
-    {
-      var colorVisual = _compositor.CreateSpriteVisual();
-      colorVisual.Brush = _compositor.CreateColorBrush(CreateNextColor(selectedColor));
-      colorVisual.CenterPoint = new Vector3(colorVisual.Size.X / 2, colorVisual.Size.Y / 2, 0);
-
-      colorVisual.Size = new Vector2(120.0f, 120.0f);
-      colorVisual.Offset = new Vector3((float)_point.Position.X, (float)_point.Position.Y, 0.0f);
-      colorVisual.Opacity = 0.7f;
-      return colorVisual;
-    }
-
-    private Color CreateNextColor(Color selectedColor)
-    {
-      _offsetBlue += 1;
-      _offsetRed += 2;
-      _offsetGreen += 3;
-      selectedColor.B = (byte)_offsetBlue;
-      selectedColor.R = (byte)_offsetRed;
-      selectedColor.G = (byte)_offsetGreen;
-      return selectedColor;
-    }
+   
 
     private void Batch_Completed(object sender, CompositionBatchCompletedEventArgs args)
     {
