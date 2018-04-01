@@ -23,6 +23,7 @@ namespace WinComposition.Playground
 			TocListView.DataContext = new DemosViewModel();
 			TocListView.SelectionChanged += TocListView_SelectionChanged;
 			DemoFrame.Navigated += DemoFrame_Navigated;
+     
 		}
 
 		private async void TocListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -41,8 +42,8 @@ namespace WinComposition.Playground
 
       }
 		}
-
-		public void NavigateToDemoPage()
+    // https://stackoverflow.com/questions/36326032/uwp-exclude-navigation-from-back-button-stack
+    public void NavigateToDemoPage()
 		{
 			var demoItem = TocListView.SelectedItem as DemoItem;
 			DemoFrame.Navigate(demoItem.DemoPageType);
@@ -50,14 +51,15 @@ namespace WinComposition.Playground
 
 		private void DemoFrame_Navigated(object sender, Windows.UI.Xaml.Navigation.NavigationEventArgs e)
 		{
-			DemoFrame.BackStack.Clear();
+			//DemoFrame.BackStack.Clear();
+     
 		}
 
 		private void DemoViewer_Loaded(object sender, RoutedEventArgs e)
 		{
-			Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", "/Docs/Checkerboard1.html");
-			var resolver = new StreamUriWinRTResolver();
-			ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
+			//Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", "/Docs/Checkerboard1.html");
+			//var resolver = new StreamUriWinRTResolver();
+			//ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
 			DemoFrame.Navigate(typeof(Views.StartHere));
 		}
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,12 @@ namespace WinComposition.Playground.Views
         public StartHere()
         {
             this.InitializeComponent();
+      this.Loaded += StartHere_Loaded;
         }
+
+    private void StartHere_Loaded(object sender, RoutedEventArgs e)
+    {
+      Messenger.Default.Send(new ChildPageLoadedMessage());
     }
+  }
 }
