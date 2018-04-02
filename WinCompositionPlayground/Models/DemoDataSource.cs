@@ -11,6 +11,7 @@ namespace WinComposition.Playground.Models
 	{
 		private ObservableCollection<Sensor> _sensors = new ObservableCollection<Sensor>();
 		private int _count = 2000;
+    private Random _random = new Random();
 		public DemoDataSource()
 		{
 			//var squares = new ObservableCollection<Rectangle>();
@@ -21,17 +22,17 @@ namespace WinComposition.Playground.Models
 				{
 					Name = "",
 					SensorID = counter.ToString("D2"),
-					SignalStrength = 10
+					SignalStrength = _random.Next(30),
 				};
 
-				if (counter % 3 == 0)
-				{
-					sensor.SignalStrength = 20;
-				}
-				if (counter % 3 == 1)
-				{
-					sensor.SignalStrength = 30;
-				}
+				//if (SignalStrength % 3 == 0)
+				//{
+				//	sensor.SignalStrength = 20;
+				//}
+				//if (counter % 3 == 1)
+				//{
+				//	sensor.SignalStrength = 30;
+				//}
 				_sensors.Add(sensor);
 
 			}

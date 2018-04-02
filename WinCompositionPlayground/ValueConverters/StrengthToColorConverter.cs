@@ -18,7 +18,7 @@ namespace WinComposition.Playground.ValueConverters
 			}
 			if (candidate > 20)
 			{
-				tempColor = Colors.Purple;
+				tempColor = Colors.Yellow;
 			}
 			return new SolidColorBrush(tempColor);
 		}

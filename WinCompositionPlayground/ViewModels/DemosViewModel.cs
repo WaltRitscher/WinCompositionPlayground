@@ -28,7 +28,14 @@ namespace WinComposition.Playground.ViewModels
       {
         DemoName = "Checkerboard Get Composition",
         DocPath = "/Docs/CheckerboardGet.html",
-        DemoPageType = typeof(WinComposition.Playground.Views.CheckerboardGet)
+        DemoPageType = typeof(WinComposition.Playground.Views.BoundGridSelectionChanged)
+      });
+
+      demoItems.Add(new DemoItem
+      {
+        DemoName = "Bound GridView PointerEntered",
+        DocPath = "/Docs/CheckerboardGet.html",
+        DemoPageType = typeof(WinComposition.Playground.Views.BoundGridPointerEnter)
       });
 
       demoItems.Add(new DemoItem

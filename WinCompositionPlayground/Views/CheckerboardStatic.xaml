@@ -9,7 +9,7 @@
       xmlns:models="using:WinComposition.Playground.Models"
       xmlns:viewmodels="using:WinComposition.Playground.ViewModels"
 			mc:Ignorable="d"
-			NavigationCacheMode="Enabled">
+		>
 	<Page.Resources>
 		<converters:StrengthToColorConverter x:Key="strengthConverter" />
 	</Page.Resources>

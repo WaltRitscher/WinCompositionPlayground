@@ -6,7 +6,7 @@
 			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 			mc:Ignorable="d"
 			Background='Black'
-			NavigationCacheMode="Enabled">
+		>
 
 	<GridView x:Name='MainGrid'
 						Background="Black"
@@ -14,10 +14,10 @@
 						SelectionMode='None'
 						IsMultiSelectCheckBoxEnabled='False'
 						ScrollViewer.VerticalScrollBarVisibility='Hidden'
-						IsSwipeEnabled="False"
+						IsSwipeEnabled="False" 
 						ScrollViewer.HorizontalScrollBarVisibility='Hidden'
 						ManipulationMode='None'
-						ItemContainerStyle='{StaticResource GridViewItemStyle1}'>
+           >
 
 	</GridView>
 </Page>

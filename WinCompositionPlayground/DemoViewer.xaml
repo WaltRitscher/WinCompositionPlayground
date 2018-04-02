@@ -78,7 +78,7 @@
 		</Border>
 		<Border Grid.Column="1"
 		        Style="{StaticResource smooth}">
-			<Pivot Background="White">
+			<Pivot Background="White" x:Name='PivotMain'>
 				<PivotItem Header="Demo">
 					<Grid>
 

@@ -115,8 +115,11 @@
     <Compile Include="Views\Animation\Batches.xaml.cs">
       <DependentUpon>Batches.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CheckerboardGet.xaml.cs">
-      <DependentUpon>CheckerboardGet.xaml</DependentUpon>
+    <Compile Include="Views\BoundGridPointerEnter.xaml.cs">
+      <DependentUpon>BoundGridPointerEnter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BoundGridSelectionChanged.xaml.cs">
+      <DependentUpon>BoundGridSelectionChanged.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CheckerboardStatic.xaml.cs">
       <DependentUpon>CheckerboardStatic.xaml</DependentUpon>
@@ -207,7 +210,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CheckerboardGet.xaml">
+    <Page Include="Views\BoundGridPointerEnter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BoundGridSelectionChanged.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

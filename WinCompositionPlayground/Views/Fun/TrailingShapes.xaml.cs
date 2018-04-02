@@ -99,9 +99,18 @@ namespace WinComposition.Playground.Views.Fun
 
     private Color CreateNextColor(Color selectedColor)
     {
-      _offsetBlue += 1;
-      _offsetRed += 2;
-      _offsetGreen += 1;
+       _offsetBlue += 7;
+      if (_offsetBlue % 255==0)
+      {
+        _offsetRed += 14;
+      }
+      if (_offsetRed % 255 == 0)
+      {
+        _offsetGreen += 21;
+      }
+    
+     
+     
       selectedColor.B = (byte)_offsetBlue;
       selectedColor.R = (byte)_offsetRed;
       selectedColor.G = (byte)_offsetGreen;

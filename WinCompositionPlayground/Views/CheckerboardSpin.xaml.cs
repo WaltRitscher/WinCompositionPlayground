@@ -45,12 +45,12 @@ namespace WinComposition.Playground.Views {
 			Visual visual;
 			Rectangle square;
 			Random ran = new Random();
-			for (int counter = 0; counter < 3000; counter++)
+			for (int counter = 0; counter < 2000; counter++)
 			{
 				square = new Rectangle
 				{
-					Width = 20,
-					Height = 20,
+					Width = 30,
+					Height = 30,
 					Opacity = .5,
 					Fill = new SolidColorBrush(Colors.LightBlue)
 				};

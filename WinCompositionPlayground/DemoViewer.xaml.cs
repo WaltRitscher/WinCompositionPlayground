@@ -23,30 +23,55 @@ namespace WinComposition.Playground
 			TocListView.DataContext = new DemosViewModel();
 			TocListView.SelectionChanged += TocListView_SelectionChanged;
 			DemoFrame.Navigated += DemoFrame_Navigated;
+      PivotMain.SelectionChanged += PivotMain_SelectionChanged;
      
 		}
 
-		private async void TocListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			ProgressGrid.Visibility = Visibility.Visible;
-			ProgressRing1.IsActive = true;
+    private void PivotMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+      if (true)
+      {
 
-			var demoItem = TocListView.SelectedItem as DemoItem;
-			if (demoItem != null)
-			{
-				Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", demoItem.DocPath);
-				var resolver = new StreamUriWinRTResolver();
-				ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
-      await Dispatcher.RunAsync(CoreDispatcherPriority.Low, NavigateToDemoPage);
+
+      }
+    }
+
+    private async void TocListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+      ShowProgressUI(showUI: true);
+
+      var demoItem = TocListView.SelectedItem as DemoItem;
+      if (demoItem != null)
+      {
+        Uri uri = ReadMeWebView.BuildLocalStreamUri("someTag", demoItem.DocPath);
+        var resolver = new StreamUriWinRTResolver();
+        ReadMeWebView.NavigateToLocalStreamUri(uri, resolver);
+        await Dispatcher.RunAsync(CoreDispatcherPriority.Low, NavigateToDemoPage);
         //NavigateToDemoPage
 
       }
-		}
+    }
+
+    private void ShowProgressUI(bool showUI)
+    {
+      if (showUI)
+      {
+        ProgressGrid.Visibility = Visibility.Visible;
+        ProgressRing1.IsActive = true;
+      }
+      else {
+        ProgressGrid.Visibility = Visibility.Collapsed;
+        ProgressRing1.IsActive = false;
+      }
+     
+    }
+
     // https://stackoverflow.com/questions/36326032/uwp-exclude-navigation-from-back-button-stack
     public void NavigateToDemoPage()
 		{
 			var demoItem = TocListView.SelectedItem as DemoItem;
 			DemoFrame.Navigate(demoItem.DemoPageType);
+
 		}
 
 		private void DemoFrame_Navigated(object sender, Windows.UI.Xaml.Navigation.NavigationEventArgs e)
@@ -65,8 +90,8 @@ namespace WinComposition.Playground
 
 		private void ChildPageLoaded(ChildPageLoadedMessage msg)
 		{
-			ProgressGrid.Visibility = Visibility.Collapsed;
-			ProgressRing1.IsActive = false;
-		}
+      ShowProgressUI(showUI: false);
+
+    }
 	}
 }
