@@ -99,14 +99,14 @@ namespace WinComposition.Playground.Views.Fun
 
     private Color CreateNextColor(Color selectedColor)
     {
-       _offsetBlue += 7;
+       _offsetBlue += 4;
       if (_offsetBlue % 255==0)
       {
-        _offsetRed += 14;
+        _offsetRed += 16;
       }
-      if (_offsetRed % 255 == 0)
+      if (_offsetRed % 63 == 0)
       {
-        _offsetGreen += 21;
+        _offsetGreen += 32;
       }
     
      
